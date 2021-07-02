@@ -31,7 +31,7 @@
     text-decoration: none;
 }
 
-.title.loaded:hover {
+.title:hover {
     color: #F67D2F;
 }
 
