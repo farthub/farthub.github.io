@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="fav/favicon.ico?v=1" />
+    <link rel="stylesheet" href="load.css">
+    <link rel="stylesheet" href="fonts.css">
+    <script src="https://kit.fontawesome.com/98877ae4c4.js" crossorigin="anonymous"></script>
+    <title>Sindura Sriram</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: #4E81FF;
+        font-family: "Input Mono Light";
+        overflow: hidden;
+    }
+
+    .page-container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+    }
+
+    .about-container {
+        margin: auto auto;
+        width: 50%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 20% 35% 30% 15%;
+        color: #fff;
+    }
+
+    .contact {
+        text-align: center;
+        border-top: 2px solid white;
+    }
+
+    .languages {
+        display: flex;
+        justify-content: space-around;
+        cursor: default;
+    }
+
+    .bio {
+        display: flex;
+        text-align: justify;
+        height: 90%;
+    }
+
+    .bio img {
+        border-radius: 20%;
+        border: 2px solid white;
+        height: 70%;
+        margin: auto auto;
+    }
+
+    .bio p {
+        text-align: justify;
+        width: 50%;
+        margin: auto auto;
+        font-size: 1.5vh;
+    }
+
+    .skills {
+        display: grid;
+        grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+        grid-template-rows: 33.33% 33.33% 33.33%;
+        font-size: 1.8vh;
+    }
+
+    .el {
+        /* border: 1px solid #FA2742; */
+        text-align: center;
+    }
+
+    .nav {
+        position: absolute;
+        display: grid;
+        grid-template-rows: 2vh 2vh 2vh;
+        /* grid-template-columns: 300px 60px; */
+        row-gap: 1.5vh;
+        right: 1rem;
+        top: 1rem;
+        /* transition: opacity 0.5s; */
+        z-index: 5;
+        /* pointer-events: none; */
+        color: #fff;
+        font-family: "Input Mono Light";
+        font-size: 2vh;
+        text-align: left;
+    }
+
+    .title {
+        position: absolute;
+        left: 1rem;
+        top: 2rem;
+        /* transition: opacity 0.5s; */
+        z-index: 5;
+        /* pointer-events: none; */
+        color: #fff;
+        font-family: "Input Mono Light";
+        font-size: 4vh;
+        text-transform: uppercase;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        text-decoration: none;
+    }
+
+    .home-button {
+        height: fit-content;
+        /* position: absolute; */
+        /* left: 1rem; */
+        text-decoration: none;
+        color: #fff;
+        padding-bottom: 10px;
+        /* border: 1px solid black; */
+        line-height: 0px;
+        text-align: right;
+    }
+
+    .vis-button {
+        /* position: absolute; */
+        /* left: 1rem;
+    top: 1.5rem; */
+        text-decoration: none;
+        color: #fff;
+        line-height: 0px;
+    }
+
+
+
+    .abt-button {
+        height: fit-content;
+        padding: 0;
+        /* text-align: right; */
+        /* position: absolute; */
+        /* left: 5.5rem; */
+        /* top: 3rem; */
+        text-decoration: none;
+        color: #fff;
+        /* border: 1px solid black; */
+        line-height: 0px;
+    }
+
+    .dat-button {
+        height: fit-content;
+        line-height: 0px;
+        /* text-align: right; */
+        /* position: absolute; */
+        /* left: 1.7rem; */
+        /* top: 1.5rem; */
+        text-decoration: none;
+        color: #fff;
+        /* border: 1px solid black; */
+    }
+
+
+
+    .sk {
+        /* background-color: #FA2742; */
+        margin: auto auto;
+        /* border-radius: 50%; */
+        /* border: 2px solid white; */
+    }
+
+
+    .img-container {
+        display: flex;
+    }
+
+    .skills img {
+        margin: auto auto;
+        width: 90%;
+    }
+
+    .chinese {
+        /* writing-mode: vertical-rl; */
+        margin: auto auto;
+        z-index: 1;
+    }
+
+    .english {
+        margin: auto auto;
+        font-size: 3.5vh;
+    }
+
+    .tamil {
+        margin: auto auto;
+        /* border-top: 1px solid white; */
+    }
+
+    .bio a {
+        color: darkblue;
+        text-decoration: #4E81FF;
+    }
+
+    .bio a:hover {
+        text-decoration: underline darkblue;
+    }
+
+
+
+    .lang-box {
+        margin: auto auto;
+        font-size: 2.5vh;
+        width: 100%;
+    }
+
+    .language {
+        margin-bottom: 10px;
+        /* padding-top: 5px; */
+    }
+
+    .descriptions {
+        position: absolute;
+        font-size: 1.8vh;
+        transform: translateY(1vh);
+        color: darkblue;
+    }
+
+    .ch {
+        transform: translate(-100%, 1vh);
+        text-align: right;
+    }
+
+    #chin {
+        z-index: 1;
+        display: inline;
+        font-weight: 500;
+    }
+
+    #chin-eng {
+        opacity: 0;
+        position: absolute;
+        /* top: 7%; */
+        /* left: 50.2%; */
+        transform: translate(70%, 0.2vh);
+        z-index: 0;
+        display: none;
+    }
+
+    .nav a:hover {
+        color: #F67D2F;
+    }
+
+    .contact-icon {
+        font-size: 4vh;
+        color: white;
+    }
+
+    .contact-icon:hover {
+        color: #F67D2F;
+    }
+</style>
+
+<body>
+    <div class="load">
+        <div class="middle">
+            <div class="loadingio-spinner-gear-xlh1ivh4x6">
+                <div class="ldio-5a3s8rymsyl">
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="loadingio-spinner-gear-2">
+                <div class="load2">
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-container" id="contents">
+        <div class="about-container">
+            <div class="languages el">
+                <div class="lang-box">
+                    <p class="language english">SINDURA SRIRAM</p>
+                    <p class="language chinese"><span class="descriptions ch"><span id="chin-eng">Chinese</span><span
+                                id="chin">中文（简体+繁體）</span>&#9135;&#9135;&#9135;&#9135;&#9135;&nbsp;</span>司爱悦 / 司愛悅</p>
+                    <p class="language tamil">சிந்துரா ஸ்ரீராம் <span
+                            class="descriptions tm">&nbsp;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135; <span
+                                id="tam">தமிழ்</span></span></p>
+                </div>
+
+            </div>
+
+            <div class="bio el">
+                <p>Hello! I'm Sindura. I'm a recent graduate from Brown University, with degrees
+                    in Applied Math and Computer Science. I've spent my time at Brown exploring Computer Science as a
+                    partner for communication and analysis. This began with my work in web design <span
+                        style="font-family: Input Mono Light Italic; color: #E8EAE3;">(see <a
+                            href="https://www.theindy.org/" target="_blank" rel="noopener noreferrer">theindy.org</a>,
+                        Brown's
+                        independent art and culture weekly newspaper, and see the 'Donate' page at <a
+                            href="https://www.care.org/our-work/food-and-nutrition/water/" target="_blank"
+                            rel="noopener noreferrer">CARE
+                            Water+</a>,
+                        designed and coded with DevelopForGood, a Columbia-based web dev team)</span>. I now work
+                    primarily with Machine Learning and Deep Learning techniques to solve tasks in data science, and my
+                    love for
+                    design has translated into a passion for data visualization. Reach out to me and I'd be happy to
+                    chat with you!
+                </p>
+                <img src="icons/sindura1.jpg" alt="sindura">
+            </div>
+            <div class="skills el">
+                <div class="sk">SQL <br> PL/SQL <br> NoSQL </div>
+                <div style="width: 50%; margin: auto auto;" class="img-container"> <img src="icons/mug.png" alt="">
+                </div>
+                <div class="sk">Python <br> MATLAB <br> Java</div>
+
+                <img style="width: 50%;" src="icons/Crayon_4@2x.png" alt="">
+                <div class="sk">C <br> C++ <br> x86</div>
+                <img src="icons/Stickpapers@2x.png" alt="">
+                <div class="sk">HTML <br> CSS <br> JS</div>
+
+                <img src="icons/iPhone_2@2x.png" alt="">
+                <img src="icons/Book@2x.png" alt="">
+                <div class="sk">R <br> Tableau </div>
+
+                <img src="icons/Crayon_5@2x.png" alt="">
+                <div class="sk">Keras <br> Tensor-Flow <br> </div>
+                <img src="icons/Stickpaper_2@2x.png" alt="">
+                <div class="sk">NumPy <br> SciKit-Learn</div>
+
+                <img style="width: 40%;" src="icons/iPhone_4@2x.png" alt="">
+                <div class="sk">React <br> Node.js <br> Vue.js</div>
+                <div class="sk">Pandas <br> GeoPandas</div>
+
+                <img src="icons/crayon22x.png" alt="">
+                <div class="sk">Google Data Studio</div>
+
+                <img src="icons/sticky@2x.png" alt="">
+                <div class="sk">Matplotlib</div>
+                <img src="icons/iPhone_1@2x.png" alt="">
+                <div class="sk">D3.js <br> chart.js </div>
+                <img src="icons/Glasses@2x.png" alt="">
+
+            </div>
+
+            <div class="contact el">
+                <h1 style="font-size: 2.5vh;">Contact Me!</h1>
+                <p><a href="mailto:sindura_sriram@brown.edu"><i
+                            class="contact-icon fas fa-envelope-square" target="_blank" rel="noopener noreferrer"></i></a>&nbsp;&nbsp;<a
+                        href="https://www.linkedin.com/in/sindura-sriram/" target="_blank" rel="noopener noreferrer"><i
+                            class="contact-icon fa fa-linkedin-square"></i></a></p>
+            </div>
+        </div>
+
+
+        <div class="nav">
+            <a href="index.html" class="abt-button">
+                <p> <i class="fas fa-home"></i> back_to_home</p>
+            </a>
+            <a href="data.html" class="dat-button">
+                <p> <i class="fas fa-database"></i> systems_&_data</p>
+            </a>
+            <a href="cv.html" class="vis-button">
+                <p> <i class="fas fa-glasses"></i> computer_vision</p>
+            </a>
+        </div>
+
+        <div class="title">about me</div>
+    </div>
+    <script src="load.js"></script>
+    <script>
+        var chinese = document.getElementById("chin");
+        var chineng = document.getElementById("chin-eng");
+
+        chinese.addEventListener("mouseover", function () {
+            chinese.style.opacity = 0;
+            chineng.style.opacity = 1;
+            chineng.style.display = "inline";
+        });
+        chinese.addEventListener("mouseout", function () {
+            chineng.style.opacity = 0;
+            chineng.style.display = "none";
+            chinese.style.opacity = 1;
+        });
+
+        var tamil = document.getElementById("tam");
+        tamil.addEventListener("mouseover", function () {
+            tamil.innerText = "Tamil";
+        });
+        tamil.addEventListener("mouseout", function () {
+            tamil.innerText = "தமிழ்";
+        });
+
+    </script>
+
+</body>
+
+</html>

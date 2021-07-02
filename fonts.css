@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Input Mono";
+    src: url(fonts/InputMono-Black.ttf);
+}
+
+@font-face {
+    font-family: "Input Mono Light";
+    src: url(fonts/InputMono-Light.ttf);
+}
+
+@font-face {
+    font-family: "Input Mono Italic";
+    src: url(fonts/InputMono-BlackItalic.ttf);
+}
+
+@font-face {
+    font-family: "Input Mono Light Italic";
+    src: url(fonts/InputMono-LightItalic.ttf);
+}

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="fav/favicon.ico?v=1" />
+    <link rel="stylesheet" href="load.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="busy-page-menu.css">
+    <link rel="stylesheet" href="nav.css">
+    <title>Sindura Sriram</title>
+</head>
+<style>
+    body {
+        background: #E8EAE3;
+        display: inline-block;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        font-family: "Input Mono Light";
+        overflow: hidden;
+    }
+
+    .page-container {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 40% 60%;
+        font-family: "Input Mono Light";
+    }
+
+    .projects {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 50% 50%;
+    }
+
+    .image-box {
+        height: 90%;
+        width: 100%;
+        display: flex;
+    }
+
+    .main {
+        position: relative;
+        background-color: #E8EAE3;
+        color: black;
+    }
+
+    .proj {
+        display: flex;
+        position: relative;
+    }
+
+    .project1 {
+        background-color: #4E81FF;
+    }
+
+    .project4 {
+        background-color: #373833;
+    }
+
+    .project3 {
+        background-color: #3f67ce;
+    }
+
+    .project2 {
+        background-color: #777971;
+    }
+
+    .text-box {
+        width: 15rem;
+        left: 1.5rem;
+        bottom: 1.5rem;
+        color: white;
+        position: absolute;
+    }
+
+    .text-box h1 {
+        width: 15vw;
+        font-size: 2vh;
+        text-transform: uppercase;
+        /* text-emphasis: bold; */
+    }
+
+    .text-box p {
+        font-size: 1.5vh;
+        width: 25vw;
+        margin: 0
+    }
+
+    .main-illus-image {
+        display: block;
+        margin: auto auto;
+        width: 70%;
+    }
+
+    .illus-image {
+        /* position: absolute; */
+        margin: auto auto;
+
+        /* transform: scaleX(-1); */
+        width: 50%;
+        position: absolute;
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+
+    .description-box {
+        color: white;
+        /* background: black; */
+        width: 60%;
+        height: 80%;
+        margin: auto auto;
+        margin-top: 0%;
+        opacity: 0%;
+        border-radius: 10px;
+        vertical-align: middle;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        transition: opacity 1s;
+    }
+
+    .description-box p {
+        font-size: 1.6vh;
+        margin: auto;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        text-align: justify;
+    }
+
+    .project2:hover .description-box {
+        opacity: 95%;
+        transition: opacity 0.5s;
+    }
+
+    .proj:hover .illus-image {
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+
+    .project1:hover .description-box {
+        opacity: 95%;
+        transition: opacity 0.5s;
+    }
+
+    .project4:hover .description-box {
+        opacity: 95%;
+        transition: opacity 0.5s;
+    }
+
+    .project3:hover .description-box {
+        opacity: 95%;
+        transition: opacity 0.5s;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .italic {
+        font-family: "Input Mono Light Italic";
+        line-height: 1.5;
+    }
+
+    .project1:hover {
+        cursor: pointer;
+    }
+
+    .project2:hover {
+        cursor: pointer;
+    }
+
+    .project3:hover {
+        cursor: default;
+    }
+
+    .project4:hover {
+        cursor: default;
+    }
+
+    .description-box a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .description-box a:hover {
+        text-decoration: underline black;
+    }
+
+    .climate-crop-graph {
+        display: none;
+        margin-top: 5vh;
+        width: 100%;
+        font-size: 1.5vh;
+    }
+
+    .lazy-graph {
+        text-align: center;
+        display: none;
+        margin-top: 20%;
+    }
+</style>
+
+<body>
+    <div class="load">
+        <div class="middle">
+            <div class="loadingio-spinner-gear-xlh1ivh4x6">
+                <div class="ldio-5a3s8rymsyl">
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="loadingio-spinner-gear-2">
+                <div class="load2">
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-container" id="contents">
+        <div class="main">
+
+            <div class="image-box">
+                <img class="main-illus-image" src="icons/more_iso.png" alt="illustration">
+            </div>
+
+            <div class="main-text-box">
+                <h1>projects in</h1>
+                <p>Systems & Data</p>
+            </div>
+        </div>
+        
+        <div class="projects">
+            <a href="vaccine-tracker.html" target="_blank" rel="noopener noreferrer" class="proj project1">
+                <img class="illus-image" style="top: 14%; left: 24%;" src="icons/graph.png"></img>
+                <div class="text-box">
+                    <h1>Vaccine Tracker, 2021</h1>
+                    <p><span class="italic">Written in : Python, MySQL</span><br> Skills : Pandas & GeoPandas, Geospatial Data Visualization, d3.js</p>
+                </div>
+                <div class="description-box">
+                    <!-- <p>Population dataset mined from <a href="https://www.census.gov/quickfacts/fact/table/US/PST045219"
+                            target="_blank" rel="noopener noreferrer">2019 US Census</a>, <a
+                            href="https://ourworldindata.org/us-states-vaccinations" target="_blank"
+                            rel="noopener noreferrer">vaccine dataset</a> collected by Our World in Data from the CDC,
+                        updated daily. </p> -->
+                        <p>A vaccine tracker, updated daily, showing the rate of and number of people vaccinated in each state, made with US Census and CDC data. Used Python and GeoPandas for local analysis, and GeoJSONs and d3.js for the web application.</p>
+                </div>
+            </a>
+            <a href="viz-index.html" target="_blank" rel="noopener noreferrer" class="proj project2">
+                <img class="illus-image" style="top: 14%; left: 24%;" src="icons/folders.png"></img>
+                <div class="text-box">
+                    <h1>Climate & Crops</h1>
+                    <p><span class="italic">Written in : Python, SQLite, JavaScript</span><br><span class="">Skills :
+                            Data mining & preprocessing, ML modeling, Statistic analysis, d3.js</span></p>
+                </div>
+                <div class="description-box">
+                    <p>Evaluated the relationship between climate change and national crop yield through regression analysis, sourced from NASA and PANGEA, and visualized as a Gapminder visualization.</p>
+                </div>
+            </a>
+            
+            <div class="proj project3">
+                <img class="illus-image" style="top: 14%; left: 24%;" src="icons/shell.png"></img>
+
+                <div class="text-box">
+                    <h1>Shell, OS</h1>
+                    <p><span class="italic">Written in : C</span><br> Skills : Signal Processing, Handling Multiple
+                        Jobs, I/O Redirects</p>
+                </div>
+                <div class="description-box">
+                    <p>Built our own version of a shell interface system, controlling system operations. Learned how to
+                        manage systems, concurrent procedures, and batch processes.</p>
+                </div>
+            </div>
+            <div class="proj project4">
+                <img class="illus-image" style="top: 14%; left: 24%;" src="icons/database.png"></img>
+
+                <div class="text-box">
+                    <h1>Database</h1>
+                    <p><span class="italic">Written in : C</span><br> Skills : Networking, Multithreading, Thread
+                        Safety, Signal Handling</p>
+                </div>
+                <div class="description-box">
+                    <p>Built a hierarchical modeled database and implemented both client and server interfaces. Built
+                        server to handle multiple
+                        client connections while maintaining data integrity and thread-safety.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav">
+            <a href="index.html" class="home-button">
+                <p> &#8592; back to home</p>
+            </a>
+            <a href="cv.html" class="vis-button">
+                <p> computer vision &#8594; </p>
+            </a>
+            <a href="about.html" class="abt-button">
+                <p> about me &#8594; </p>
+            </a>
+        </div>
+    </div>
+
+    <script src="load.js"></script>
+   
+</body>
+
+</html>
