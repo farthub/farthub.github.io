@@ -48,23 +48,23 @@
                 <img src="icons/macbook.png" id="laptop" alt="laptop" draggable="false" (dragstart)="false;"
                     class="unselectable">
                 <img class="pencil obj" src="icons/pencil2x.png" alt="pencil" draggable="false" (dragstart)="false;"
-                class="unselectable">
+                    class="unselectable">
                 <img class="crayon obj" src="icons/crayon12x.png" alt="crayon" draggable="false" (dragstart)="false;"
-                class="unselectable">
+                    class="unselectable">
                 <img class="crayon1 obj" src="icons/crayon22x.png" alt="crayon" draggable="false" (dragstart)="false;"
-                class="unselectable">
+                    class="unselectable">
                 <img class="crayon2 obj" src="icons/crayon32x.png" alt="crayon" draggable="false" (dragstart)="false;"
-                class="unselectable">
+                    class="unselectable">
                 <img class="pen obj" src="icons/pen2x.png" alt="pen" draggable="false" (dragstart)="false;"
-                class="unselectable">
+                    class="unselectable">
                 <img class="pad obj" src="icons/pad@2x.png" alt="pad" draggable="false" (dragstart)="false;"
-                class="unselectable">
+                    class="unselectable">
                 <img class="sphere obj" src="icons/Sphere@2x.png" alt="sphere" draggable="false" (dragstart)="false;"
-                class="unselectable">
-                <img class="sticky obj" src="icons/sticky@2x.png" alt="sticky-note" draggable="false" (dragstart)="false;"
-                class="unselectable">
+                    class="unselectable">
+                <img class="sticky obj" src="icons/sticky@2x.png" alt="sticky-note" draggable="false"
+                    (dragstart)="false;" class="unselectable">
                 <img class="ruler obj" src="icons/ruler@2x.png" alt="ruler" draggable="false" (dragstart)="false;"
-                class="unselectable">
+                    class="unselectable">
                 <div class="smile">
                     <svg id="smile" xmlns="http://www.w3.org/2000/svg" width="350" height="200" viewBox="0 0 350 200">
                         <path id="smile_curve" d="m10,50 h200"></path>
@@ -179,17 +179,19 @@
             <span class="first">Sindura</span><br>
             <span class="eighth">Sriram</span>
         </a>
-        
-        
-    <script>
-        window.onload = function(){
-            var smile_animation = document.getElementById("t3");
-            smile_animation.beginElement();
 
-            var icons = document.getElementsByClassName("icons")[0];
-            icons.className+= " loaded";
-        };
-    </script>
+
+        <script>
+            window.onload = function () {
+                var smile_animation = document.getElementById("t3");
+                var icons = document.getElementsByClassName("icons")[0];
+
+                setTimeout(function () {
+                    icons.className += " loaded";
+                    smile_animation.beginElement();
+                }, 4000);
+            };
+        </script>
 
 
 
