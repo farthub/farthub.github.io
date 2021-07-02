@@ -1,14 +1,14 @@
-function loadIndex(){
-    window.onload = function () {
-        var smile_animation = document.getElementById("t3");
-        var icons = document.getElementsByClassName("icons")[0];
-    
-        setTimeout(function () {
-            icons.className += " loaded";
-            smile_animation.beginElement();
-        }, 4000);
-    };
+function loadIndex() {
+    var smile_animation = document.getElementById("t3");
+    var icons = document.getElementsByClassName("icons")[0];
+
+    setTimeout(function () {
+        icons.className += " loaded";
+        smile_animation.beginElement();
+    }, 4000);
 }
+
+window.onload = loadIndex;
 
 // document.onreadystatechange = function () {
 //     var state = document.readyState
@@ -24,6 +24,6 @@ function loadIndex(){
 //                 loadIndex();
 //             }
 //         }, 2000);
-        
+
 //     }
 // }
