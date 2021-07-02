@@ -82,7 +82,7 @@
     text-decoration: none;
     color: white;
     line-height: 0px;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 .vis-button:hover p {
@@ -100,7 +100,7 @@
     color: white;
     /* border: 1px solid black; */
     line-height: 0px;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 .abt-button:hover p {
@@ -117,7 +117,7 @@
     text-decoration: none;
     color: white;
     /* border: 1px solid black; */
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 .dat-button:hover p {
@@ -125,16 +125,16 @@
 }
 
 .first {
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 .eighth {
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 
 
-.title.loaded .first {
+/* .title.loaded .first {
     animation: fade-in 1.5s 0.1s 1;
     animation-fill-mode: forwards;
 }
@@ -157,4 +157,4 @@
 .nav.loaded .abt-button {
     animation: fade-in 1.5s 1 3.0s;
     animation-fill-mode: forwards;
-}
+} */
