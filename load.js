@@ -20,6 +20,8 @@ document.onreadystatechange = function () {
             document.getElementsByClassName('load')[0].style.visibility = "hidden";
             document.getElementById('contents').style.visibility = "visible";
             var fileName = location.pathname.split("/").slice(-1);
+            console.log(location.pathname);
+            console.log(fileName);
             if(fileName[0] === "index.html"){
                 loadIndex();
             }
