@@ -16,12 +16,9 @@ document.onreadystatechange = function () {
         document.getElementById('contents').style.visibility = "hidden";
     } else if (state == 'complete') {
         setTimeout(function () {
-            // document.getElementById('interactive');
             document.getElementsByClassName('load')[0].style.visibility = "hidden";
             document.getElementById('contents').style.visibility = "visible";
             var fileName = location.pathname.split("/").slice(-1);
-            console.log(location.pathname);
-            console.log(fileName);
             if(fileName[0] === "index.html" || fileName[0] === ""){ // sindura-sriram.github.io/index.html & sindura-sriram/github.io
                 loadIndex();
             }
