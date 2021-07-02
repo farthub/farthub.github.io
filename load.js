@@ -2,10 +2,10 @@ function loadIndex() {
     var smile_animation = document.getElementById("t3");
     var icons = document.getElementsByClassName("icons")[0];
 
-    setTimeout(function () {
-        icons.className += " loaded";
-        smile_animation.beginElement();
-    }, 4000);
+    console.log("loadIndex called");
+
+    icons.className += " loaded";
+    smile_animation.beginElement();
 }
 
 // window.onload = loadIndex;
