@@ -22,7 +22,7 @@ document.onreadystatechange = function () {
             var fileName = location.pathname.split("/").slice(-1);
             console.log(location.pathname);
             console.log(fileName);
-            if(fileName[0] === "index.html"){
+            if(fileName[0] === "index.html" || fileName[0] === ""){ // sindura-sriram.github.io/index.html & sindura-sriram/github.io
                 loadIndex();
             }
         }, 2000);
