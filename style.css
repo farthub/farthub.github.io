@@ -105,109 +105,59 @@ body {
     }
 }
 
-.sphere{
-    position: absolute;
-    top: 20%;
-    left: 70%;
-}
-.pad{
-    position: absolute;
-    top: 30%;
-    left: 75%;
-    z-index: 2;
-}
-.pen{
-    position: absolute;
-    top: 40%;
-    left: 65%;
-    z-index: 4;
-}
-.sticky{
-    position: absolute;
-    top: 45%;
-    left: 100%;
-}
 
-.ruler{
-    position: absolute;
-    top: 65%;
-    left: -5%;
-}
-.pencil{
-    position: absolute;
-    top: 80%;
-    left: -10%;
-}
-.crayon{
-    position: absolute;
-    top: 90%;
-    left: -10%;
-}
-.crayon1{
-    position: absolute;
-    top: 90%;
-    left: 10%;
-}
-.crayon2{
-    position: absolute;
-    top: 100%;
-    left: 20%;
-}
-
-
-
-.icons.loaded .sphere{
+.icons .sphere{
     position: absolute;
     top: 20%;
     left: 70%;
     animation: shift-up 6s 0.01s infinite;
 }
-.icons.loaded .pad{
+.icons .pad{
     position: absolute;
     top: 30%;
     left: 75%;
     z-index: 2;
     animation: shift-r 6s 1.5s infinite;
 }
-.icons.loaded .pen{
+.icons .pen{
     position: absolute;
     top: 40%;
     left: 65%;
     z-index: 4;
     animation: shift-down 6s 3.0s infinite;
 }
-.icons.loaded .sticky{
+.icons .sticky{
     position: absolute;
     top: 45%;
     left: 100%;
     animation: shift-down 6s 4.5s infinite;
 }
 
-.icons.loaded .ruler{
+.icons .ruler{
     position: absolute;
     top: 65%;
     left: -5%;
     animation: shift 6s 0.01s infinite;
 }
-.icons.loaded .pencil{
+.icons .pencil{
     position: absolute;
     top: 80%;
     left: -10%;
     animation: shift 6s 1s infinite;
 }
-.icons.loaded .crayon{
+.icons .crayon{
     position: absolute;
     top: 90%;
     left: -10%;
     animation: shift 6s 2s infinite;
 }
-.icons.loaded .crayon1{
+.icons .crayon1{
     position: absolute;
     top: 90%;
     left: 10%;
     animation: shift 6s 3s infinite;
 }
-.icons.loaded .crayon2{
+.icons .crayon2{
     position: absolute;
     top: 100%;
     left: 20%;
