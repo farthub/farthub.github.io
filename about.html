@@ -61,10 +61,17 @@
     }
 
     .bio p {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .bio .paragraph{
         text-align: justify;
-        width: 50%;
+        
         margin: auto auto;
         font-size: 1.5vh;
+        /* text-indent: 2em; */
     }
 
     .skills {
@@ -72,6 +79,7 @@
         grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
         grid-template-rows: 33.33% 33.33% 33.33%;
         font-size: 1.8vh;
+        border-top: 2px solid white;
     }
 
     .el {
@@ -257,33 +265,23 @@
     .contact-icon:hover {
         color: #F67D2F;
     }
+
+    .skills-header{
+        position: absolute;
+        transform: translateY(-6vh);
+        font-size: 2.5vh;
+        text-transform: uppercase;
+    }
 </style>
 
 <body>
     <div class="load">
         <div class="middle">
-            <div class="loadingio-spinner-gear-xlh1ivh4x6">
-                <div class="ldio-5a3s8rymsyl">
-                    <div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-            <div class="loadingio-spinner-gear-2">
-                <div class="load2">
-                    <div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
+            <div class="loadingio-spinner-dual-ball-saq2l5iqxlp">
+                <div class="ldio-jogel4x0fe7">
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
             </div>
         </div>
@@ -303,26 +301,25 @@
             </div>
 
             <div class="bio el">
-                <p>Hello! I'm Sindura. I'm a recent graduate from Brown University, with degrees
-                    in Applied Math and Computer Science. I've spent my time at Brown exploring Computer Science as a
-                    partner for communication and analysis. This began with my work in web design <span
-                        style="font-family: Input Mono Light Italic; color: #E8EAE3;">(see <a
-                            href="https://www.theindy.org/" target="_blank" rel="noopener noreferrer">theindy.org</a>,
-                        Brown's
-                        independent art and culture weekly newspaper, and see the 'Donate' page at <a
-                            href="https://www.care.org/our-work/food-and-nutrition/water/" target="_blank"
-                            rel="noopener noreferrer">CARE
-                            Water+</a>,
-                        designed and coded with DevelopForGood, a Columbia-based web dev team)</span>. I now work
-                    primarily with Machine Learning and Deep Learning techniques to solve tasks in data science, and my
-                    love for
-                    design has translated into a passion for data visualization. Reach out to me and I'd be happy to
-                    chat with you!
-                </p>
+                <div class="paragraph">
+                    <p>Hi! I'm Sindura, a software engineer based in the SF Bay Area. I'm a 2021 graduate of
+                        Brown University, where I majored in Applied Math and Computer Science. </p>
+                        
+                    <p>At Brown, I have explored Computer Science as a tool for communication and analysis, beginning with my work in web
+                        design -- see <a href="https://www.theindy.org/" target="_blank"
+                            rel="noopener noreferrer">theindy.org</a>, Brown's weekly art and culture newspaper. For my <a href="viz-index.html" target="_blank"
+                            rel="noopener noreferrer">capstone project</a>, I have tried to measure the impact of climate change on US agriculture through regression analysis.
+                    </p>
+                    <p>I'm interested in solving hard problems, collaboratively and over Red Bull. Reach out to me and I'd be happy to
+                        chat with you!</p>
+                </div>
+                
                 <img src="icons/sindura1.jpg" alt="sindura">
             </div>
+            
             <div class="skills el">
-                <div class="sk">SQL <br> PL/SQL <br> NoSQL </div>
+                <p class="skills-header">Skills</p>
+                <div class="sk">SQL <br> PL/SQL <br> MongoDB </div>
                 <div style="width: 50%; margin: auto auto;" class="img-container"> <img src="icons/mug.png" alt="">
                 </div>
                 <div class="sk">Python <br> MATLAB <br> Java</div>
@@ -343,13 +340,13 @@
 
                 <img style="width: 40%;" src="icons/iPhone_4@2x.png" alt="">
                 <div class="sk">React <br> Node.js <br> Vue.js</div>
-                <div class="sk">Pandas <br> GeoPandas</div>
+                <div class="sk">pandas <br> GeoPandas</div>
 
                 <img src="icons/crayon22x.png" alt="">
                 <div class="sk">Google Data Studio</div>
 
                 <img src="icons/sticky@2x.png" alt="">
-                <div class="sk">Matplotlib</div>
+                <div class="sk">seaborn<br>OpenCV</div>
                 <img src="icons/iPhone_1@2x.png" alt="">
                 <div class="sk">D3.js <br> chart.js </div>
                 <img src="icons/Glasses@2x.png" alt="">
@@ -358,8 +355,8 @@
 
             <div class="contact el">
                 <h1 style="font-size: 2.5vh;">Contact Me!</h1>
-                <p><a href="mailto:sindura_sriram@brown.edu"><i
-                            class="contact-icon fas fa-envelope-square" target="_blank" rel="noopener noreferrer"></i></a>&nbsp;&nbsp;<a
+                <p><a href="mailto:sindura_sriram@brown.edu"><i class="contact-icon fas fa-envelope-square"
+                            target="_blank" rel="noopener noreferrer"></i></a>&nbsp;&nbsp;<a
                         href="https://www.linkedin.com/in/sindura-sriram/" target="_blank" rel="noopener noreferrer"><i
                             class="contact-icon fa fa-linkedin-square"></i></a></p>
             </div>
