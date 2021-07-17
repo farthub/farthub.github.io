@@ -54,22 +54,11 @@
     .proj {
         display: flex;
         position: relative;
-    }
-
-    .project1 {
-        background-color: #4E81FF;
-    }
-
-    .project4 {
+        width: 80%;
+        height: 80%;
+        margin: auto;
+        border-radius: 5%;
         background-color: #373833;
-    }
-
-    .project3 {
-        background-color: #3f67ce;
-    }
-
-    .project2 {
-        background-color: #777971;
     }
 
     .text-box {
@@ -89,7 +78,7 @@
 
     .text-box p {
         font-size: 1.5vh;
-        width: 25vw;
+        width: 22vw;
         margin: 0
     }
 
@@ -100,10 +89,7 @@
     }
 
     .illus-image {
-        /* position: absolute; */
         margin: auto auto;
-
-        /* transform: scaleX(-1); */
         width: 50%;
         position: absolute;
         opacity: 1;
@@ -113,7 +99,7 @@
     .description-box {
         color: white;
         /* background: black; */
-        width: 60%;
+        width: 80%;
         height: 80%;
         margin: auto auto;
         margin-top: 0%;
@@ -132,10 +118,11 @@
         margin: auto;
         margin-left: 2rem;
         margin-right: 2rem;
-        text-align: justify;
+        text-align: left;
+        word-spacing: 2px;
     }
 
-    .project2:hover .description-box {
+    .proj:hover .description-box {
         opacity: 95%;
         transition: opacity 0.5s;
     }
@@ -143,21 +130,6 @@
     .proj:hover .illus-image {
         opacity: 0;
         transition: opacity 0.2s;
-    }
-
-    .project1:hover .description-box {
-        opacity: 95%;
-        transition: opacity 0.5s;
-    }
-
-    .project4:hover .description-box {
-        opacity: 95%;
-        transition: opacity 0.5s;
-    }
-
-    .project3:hover .description-box {
-        opacity: 95%;
-        transition: opacity 0.5s;
     }
 
     a {
@@ -226,7 +198,7 @@
         <div class="main">
 
             <div class="image-box">
-                <img class="main-illus-image" src="icons/more_iso.png" alt="illustration">
+                <img class="main-illus-image" src="icons/desktop_iso.png" alt="illustration">
             </div>
 
             <div class="main-text-box">
@@ -248,7 +220,7 @@
                             href="https://ourworldindata.org/us-states-vaccinations" target="_blank"
                             rel="noopener noreferrer">vaccine dataset</a> collected by Our World in Data from the CDC,
                         updated daily. </p> -->
-                        <p>A vaccine tracker, updated daily, showing the rate of and number of people vaccinated in each state, made with US Census and CDC data. Used Python and GeoPandas for local analysis, and GeoJSONs and d3.js for the web application.</p>
+                        <p>A vaccine tracker, updated daily, showing the rate of and number of people vaccinated in each state, made with US Census and CDC data. Used Python and GeoPandas for initial analysis, and GeoJSONs and d3.js for web application.</p>
                 </div>
             </a>
             <a href="viz-index.html" target="_blank" rel="noopener noreferrer" class="proj project2">
