@@ -24,7 +24,7 @@
     padding-bottom: 10px;
     /* border: 1px solid black; */
     line-height: 0px;
-    text-align: left;
+    /* text-align: left; */
 }
 
 .home-button:hover p {
@@ -37,6 +37,7 @@
     top: 1.5rem; */
     text-decoration: none;
     color: black;
+    z-index: 6;
     line-height: 0px;
 }
 
@@ -53,7 +54,7 @@
     /* top: 3rem; */
     text-decoration: none;
     color: black;
-    text-align: right;
+    /* text-align: right; */
     /* border: 1px solid black; */
     line-height: 0px;
 }

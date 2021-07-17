@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="busy-page-menu.css">
     <link rel="stylesheet" href="nav.css">
+    <script src="https://kit.fontawesome.com/98877ae4c4.js" crossorigin="anonymous"></script>
+    
     <title>Sindura Sriram</title>
 </head>
 <style>
@@ -58,7 +60,7 @@
         height: 80%;
         margin: auto;
         border-radius: 5%;
-        background-color: #373833;
+        background-color: #FA2742;
     }
 
     .text-box {
@@ -78,7 +80,7 @@
 
     .text-box p {
         font-size: 1.5vh;
-        width: 22vw;
+        width: 21vw;
         margin: 0
     }
 
@@ -94,6 +96,8 @@
         position: absolute;
         opacity: 1;
         transition: opacity 0.5s;
+        top: 10%;
+        left: 24%;
     }
 
     .description-box {
@@ -167,18 +171,7 @@
         text-decoration: underline black;
     }
 
-    .climate-crop-graph {
-        display: none;
-        margin-top: 5vh;
-        width: 100%;
-        font-size: 1.5vh;
-    }
-
-    .lazy-graph {
-        text-align: center;
-        display: none;
-        margin-top: 20%;
-    }
+    
 </style>
 
 <body>
@@ -209,22 +202,17 @@
         
         <div class="projects">
             <a href="vaccine-tracker.html" target="_blank" rel="noopener noreferrer" class="proj project1">
-                <img class="illus-image" style="top: 14%; left: 24%;" src="icons/graph.png"></img>
+                <img class="illus-image" src="icons/graph.png"></img>
                 <div class="text-box">
                     <h1>Vaccine Tracker, 2021</h1>
                     <p><span class="italic">Written in : Python, MySQL</span><br> Skills : Pandas & GeoPandas, Geospatial Data Visualization, d3.js</p>
                 </div>
                 <div class="description-box">
-                    <!-- <p>Population dataset mined from <a href="https://www.census.gov/quickfacts/fact/table/US/PST045219"
-                            target="_blank" rel="noopener noreferrer">2019 US Census</a>, <a
-                            href="https://ourworldindata.org/us-states-vaccinations" target="_blank"
-                            rel="noopener noreferrer">vaccine dataset</a> collected by Our World in Data from the CDC,
-                        updated daily. </p> -->
                         <p>A vaccine tracker, updated daily, showing the rate of and number of people vaccinated in each state, made with US Census and CDC data. Used Python and GeoPandas for initial analysis, and GeoJSONs and d3.js for web application.</p>
                 </div>
             </a>
             <a href="viz-index.html" target="_blank" rel="noopener noreferrer" class="proj project2">
-                <img class="illus-image" style="top: 14%; left: 24%;" src="icons/folders.png"></img>
+                <img class="illus-image" src="icons/folders.png"></img>
                 <div class="text-box">
                     <h1>Climate & Crops</h1>
                     <p><span class="italic">Written in : Python, SQLite, JavaScript</span><br><span class="">Skills :
@@ -236,7 +224,7 @@
             </a>
             
             <div class="proj project3">
-                <img class="illus-image" style="top: 14%; left: 24%;" src="icons/shell.png"></img>
+                <img class="illus-image" src="icons/shell.png"></img>
 
                 <div class="text-box">
                     <h1>Shell, OS</h1>
@@ -249,7 +237,7 @@
                 </div>
             </div>
             <div class="proj project4">
-                <img class="illus-image" style="top: 14%; left: 24%;" src="icons/database.png"></img>
+                <img class="illus-image" src="icons/database.png"></img>
 
                 <div class="text-box">
                     <h1>Database</h1>
@@ -266,13 +254,13 @@
 
         <div class="nav">
             <a href="index.html" class="home-button">
-                <p> &#8592; back to home</p>
+                <p> <i class="fas fa-home"></i> home</p>
             </a>
             <a href="cv.html" class="vis-button">
-                <p> computer vision &#8594; </p>
+                <p> <i class="fas fa-glasses"></i> computer_vision </p>
             </a>
             <a href="about.html" class="abt-button">
-                <p> about me &#8594; </p>
+                <p> <i class="far fa-question-circle" style="width: 17px;"> </i> about_me </p>
             </a>
         </div>
     </div>
