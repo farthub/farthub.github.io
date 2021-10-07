@@ -1,15 +1,9 @@
-html, body {
-    height: 100%;
-}
-
 body {
     width: 100vw;
-    height: 100vh;
+    height: 500vh;
     margin: 0;
-    /* box-sizing: border-box; */
     display: flex;
     overflow: hidden;
-    font-family: "Input Mono";
 }
 
 .cursor {
@@ -19,7 +13,6 @@ body {
 }
 
 .unselectable {
-    user-drag: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
@@ -28,11 +21,12 @@ body {
 }
 
 .landing-page {
+    font-family: "Input Mono";
     width: 100vw;
     height: 100vh;
     position: relative;
     display: flex;
-    background-color: #4E81FF;
+    background-color: #E8EAE3;
     z-index: 0;
 }
 
@@ -279,4 +273,42 @@ body {
 
 .icons.loaded .password {
     animation: blink-caret 0.5s step-end 5;
+}
+
+.page{
+    height: 100vh;
+    /* border-bottom: 2px solid black; */
+    font-family: "Input Mono Light";
+    width: 100vw;
+    font-weight:normal;
+}
+
+.scroll{
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    display: block;
+    /* transform: translateY(90vh); */
+}
+
+.scroll-stick{
+    position: fixed;
+    display: block;
+    /* transform: translateY(90vh); */
+}
+
+
+
+.arrow{
+    font-size: 1.2rem;
+}
+.arrow:hover{
+    color:#063aca;
+}
+
+.pressed{
+    color:#16D0F5;
+}
+.invalid{
+    color:gray;
 }

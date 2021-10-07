@@ -3,11 +3,6 @@
     src: url(fonts/InputMono-Black.ttf);
 }
 
-body {
-    background-color: #d6d6d6;
-    font-family: "Input Mono";
-}
-
 .load {
     display: flex;
     background-color: #E8EAE3;

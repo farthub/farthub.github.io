@@ -13,11 +13,11 @@ function loadIndex() {
 document.onreadystatechange = function () {
     var state = document.readyState
     if (state == 'interactive') {
-        document.getElementById('contents').style.visibility = "hidden";
+        document.getElementsByClassName('contents')[0].style.visibility = "hidden";
     } else if (state == 'complete') {
         setTimeout(function () {
             document.getElementsByClassName('load')[0].style.visibility = "hidden";
-            document.getElementById('contents').style.visibility = "visible";
+            document.getElementsByClassName('contents')[0].style.visibility = "visible";
             var fileName = location.pathname.split("/").slice(-1);
             if(fileName[0] === "index.html" || fileName[0] === ""){ // sindura-sriram.github.io/index.html & sindura-sriram/github.io
                 loadIndex();

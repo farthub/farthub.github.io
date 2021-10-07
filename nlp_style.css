@@ -1,0 +1,120 @@
+
+.box {
+    height: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+}
+.column{
+    height: 100%;
+    display: flex;
+    margin: auto auto;
+}
+.content{
+    margin: auto auto;
+    text-align: center;
+}
+
+
+.projects {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 50% 50%;
+    position: relative;
+    background-color: #E8EAE3;
+}
+
+.projects a {
+    color: black;
+    text-decoration: none;
+}
+
+.projects a:hover {
+    text-decoration: underline black;
+}
+
+.circle1{
+    border-radius: 50%;
+    /* border: 1px solid black; */
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #14BDF8;
+}
+
+.circle2{
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: red;
+    margin: auto;
+    transition: transform 0.5s;
+}
+
+.circle2:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.circle3{
+    position: absolute;
+    border-radius: 50%;
+    /* border: 1px solid black; */
+    width: 1rem;
+    height: 1rem;
+    background-color: #14BDF8;
+    transform: translateX(-7.5vw);
+}
+
+.circle4{
+    position: absolute;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    background-color: red;
+    margin: auto;
+    transform: translateX(-5vw);
+}
+
+.key1{
+    position: absolute;
+    writing-mode:vertical-lr;
+    transform: translate(-7.65vw, 3vh);
+}
+
+.key2{
+    position: absolute;
+    writing-mode:vertical-lr;
+    transform: translate(-5.15vw, 3vh);
+}
+
+.bold{
+    font-weight: 1000;
+}
+
+.line{
+    background-color: black;
+    height: 2.5rem;
+    width: 2px;
+    margin: auto
+}
+
+.nlp_caption{
+    position: absolute;
+    transform: translate(4rem, -2rem);
+}
+
+.nlp_caption_1{
+    text-align: right;
+    position: absolute;
+    transform: translate(4rem, -2rem);
+}
+
+.nlp_caption_1:hover{
+    font-weight: 900;
+    cursor: pointer;
+}
+
+#nlp-step-title{
+    font-size: 3vh;
+}
