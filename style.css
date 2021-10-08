@@ -302,12 +302,9 @@ body {
 .arrow{
     font-size: 1.2rem;
 }
-.arrow:hover{
-    color:#063aca;
-}
 
 .pressed{
-    color:#16D0F5;
+    color:#14BDF8;
 }
 .invalid{
     color:gray;

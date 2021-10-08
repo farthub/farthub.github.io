@@ -31,6 +31,10 @@
     .year {
         color: darkgray;
     }
+
+    .over{
+        color:#305BD1;
+    }
 </style>
 
 <style>
@@ -344,8 +348,7 @@
             </div>
 
             <a href="index.html" class="title">
-                <span>Sindura</span><br>
-                <span>Sriram</span>
+                <span>Sindura<br>Sriram</span>
             </a>
         </section>
 
@@ -414,7 +417,9 @@
                         <h1 id='nlp-step-title'>Text Analysis</h1>
                     </div>
                     <p id='nlp-step-text' class="project-description">
-                        Building an NER (Named Entity Recognition) model to obtain "drug", "target", "disease", and "species" entities from preprocessed text, achieving a F1 score of 98%. Extracting entities from legacy data.
+                        Building an NER (Named Entity Recognition) model to obtain "drug", "target", "disease", and
+                        "species" entities from preprocessed text, achieving a F1 score of 98%. Extracting entities from
+                        legacy data.
                         <br>
                         <br>
                         <br>
@@ -539,15 +544,14 @@
                             beginning with my work in writing, editing, and web
                             design -- see <a href="https://www.theindy.org/" target="_blank"
                                 rel="noopener noreferrer">theindy.org</a>, Brown's weekly art and culture newspaper. For
-                            my undergraduate <a href="viz-index.html" target="_blank"
-                                rel="noopener noreferrer">capstone project</a> in Data Science, I have tried to measure
+                            my undergraduate <a href="viz-index.html" target="_blank" rel="noopener noreferrer">capstone
+                                project</a> in Data Science, I have tried to measure
                             the impact of
                             climate change on US agriculture through regression analysis of temperature change and crop
                             yield.
                         </p>
-                        <p>I'm interested in building new solutions to solve old problems. Reach out to me and I'd be
-                            happy to
-                            chat with you!</p>
+                        <p>I'm interested in building new solutions to solve problems old and new. Reach out to me and
+                            I'd be happy to chat with you!</p>
                     </div>
 
 
@@ -583,7 +587,7 @@
 
                     <img title="spacy" style="width: 2rem;" src="code_icons/spacy.png" alt="spacy">
                     <!-- <img title="John Snow Labs Spark NLP" style="width: 2rem;" src="code_icons/johnsnowlabs.png" -->
-                        <!-- alt="Spark NLP"> -->
+                    <!-- alt="Spark NLP"> -->
 
 
                     <img title="tensorflow" style="width: 2rem;" src="code_icons/keras.png" alt="Tensorflow">
@@ -612,10 +616,10 @@
                     <p style="color:#E8EAE3;">contact me</p>
                     <p>
                         <a href="https://github.com/sindura-sriram/sindura-sriram.github.io" target="_blank"
-                        rel="noopener noreferrer"><i class="contact-icon fab fa-github" id="source-code"></i></a>
+                            rel="noopener noreferrer"><i class="contact-icon fab fa-github" id="source-code"></i></a>
                         &nbsp;&nbsp;
-                        <a href="./resume.pdf" target="_blank" rel="noopener noreferrer" download><i id="resume" class="contact-icon resume fas fa-file-download"
-                                ></i></a>
+                        <a href="./resume.pdf" target="_blank" rel="noopener noreferrer" download><i id="resume"
+                                class="contact-icon resume fas fa-file-download"></i></a>
                         &nbsp;&nbsp;
                         <i class="contact-icon fas fa-clipboard" id="copy-email"></i>
                         &nbsp;&nbsp;
@@ -1063,6 +1067,18 @@
             e.target.classList.remove(ACTIVE_CLASS)
         }
 
+
+        function smoothScroll(offsetPixels) {
+            if (offsetPixels < 0) { //avoid negative numbers on the scroll up
+                offsetPixels = 0;
+            }
+
+            //this function is just to make an animated scrolling transition
+            $('html, body').animate({
+                scrollTop: offsetPixels
+            }, 300);
+        }
+
         function pressButton(button) {
             // if (button.classList.contains(ACTIVE_CLASS)) {
             //     console.log('reset')
@@ -1084,40 +1100,17 @@
             }
         }
 
-        $(document).keyup(function (event) {
-            var howFarFromTop = $(document).scrollTop(); //how far from the top have we scrolled?
-            var currentWindowHeight = $(window).height(); //current window height for responsiveness
-            var currentSlide = Math.round(howFarFromTop / currentWindowHeight, 0); //approximate which slide is on screen at the moment
+        function removePressed() {
+            var secs = [section_one, section_two, section_three, section_four, section_five];
 
-            console.log(currentSlide);
-
-            if (event.which == 37 || event.which == 38) {
-                pressButton(buttons.up);
-                smoothScroll(currentWindowHeight * (currentSlide - 1));
-                if (currentSlide > 0) {
-                    slide = currentSlide - 1;
-                }
-
-            }
-            if (event.which === 40 || event.which == 39) {
-                pressButton(buttons.down);
-                smoothScroll(currentWindowHeight * (currentSlide + 1));
-                if (currentSlide < 4) {
-                    slide = currentSlide + 1;
+            for (sec of secs) {
+                if (sec.classList.contains("pressed")) {
+                    sec.classList.remove("pressed");
                 }
             }
+        }
 
-            console.log(slide);
-
-            function removePressed() {
-                var secs = [section_one, section_two, section_three, section_four, section_five];
-
-                for (sec of secs) {
-                    if (sec.classList.contains("pressed")) {
-                        sec.classList.remove("pressed");
-                    }
-                }
-            }
+        function checkValidMove(slide) {
 
             if (slide == 0) {
                 removePressed();
@@ -1150,18 +1143,76 @@
                     section_four.classList.add("pressed");
                 }
             }
-        });
+        }
+        function moveUp() {
+            var howFarFromTop = $(document).scrollTop();
+            var currentWindowHeight = $(window).height();
+            var currentSlide = Math.round(howFarFromTop / currentWindowHeight, 0);
 
-        function smoothScroll(offsetPixels) {
-            if (offsetPixels < 0) { //avoid negative numbers on the scroll up
-                offsetPixels = 0;
+            var slide = -1;
+
+            console.log(currentSlide);
+
+            pressButton(buttons.up);
+            smoothScroll(currentWindowHeight * (currentSlide - 1));
+            if (currentSlide > 0) {
+                slide = currentSlide - 1;
+            }
+            console.log(slide);
+            checkValidMove(slide);
+        }
+
+        function moveDown() {
+            var howFarFromTop = $(document).scrollTop();
+            var currentWindowHeight = $(window).height();
+            var currentSlide = Math.round(howFarFromTop / currentWindowHeight, 0);
+
+            console.log(currentSlide);
+
+            pressButton(buttons.down);
+            smoothScroll(currentWindowHeight * (currentSlide + 1));
+            if (currentSlide < 4) {
+                slide = currentSlide + 1;
             }
 
-            //this function is just to make an animated scrolling transition
-            $('html, body').animate({
-                scrollTop: offsetPixels
-            }, 300);
+            console.log(slide);
+            checkValidMove(slide);
         }
+
+        up.addEventListener("click", moveUp);
+        down.addEventListener("click", moveDown);
+
+        up.addEventListener("mouseover", function(){
+            if(!up.classList.contains("invalid") && !up.classList.contains("over")){
+                up.classList.add("over");
+            }
+        });
+        up.addEventListener("mouseout", function(){
+            if(up.classList.contains("over")){
+                up.classList.remove("over");
+            }
+        });
+
+        down.addEventListener("mouseover", function(){
+            if(!down.classList.contains("invalid") && !down.classList.contains("over")){
+                down.classList.add("over");
+            }
+        });
+        down.addEventListener("mouseout", function(){
+            if(down.classList.contains("over")){
+                down.classList.remove("over");
+            }
+        });
+
+        $(document).keyup(function (event) {
+
+            if (event.which == 37 || event.which == 38) {
+                moveUp();
+            }
+            if (event.which === 40 || event.which == 39) {
+                moveDown();
+            }
+        });
     </script>
 
 </body>
