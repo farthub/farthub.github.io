@@ -40,79 +40,6 @@
 </style>
 
 <style>
-    .hidden {
-        visibility: hidden;
-    }
-
-    .bubble {
-        position: absolute;
-        font-family: sans-serif;
-        font-size: 12px;
-        line-height: 24px;
-        width: 100px;
-        background: #fff;
-        border-radius: 10px;
-        padding: 5px;
-        text-align: center;
-        color: #000;
-    }
-
-    .bub-five {
-        transform: translate(32rem, 0rem);
-    }
-
-    .bub-four {
-        transform: translate(27.5rem, 0rem);
-    }
-
-    .bub-three {
-        transform: translate(23rem, 0rem);
-    }
-
-    .bub-two {
-        transform: translate(13.5rem, 0rem);
-    }
-
-    .bub-one {
-        transform: translate(9rem, 0rem);
-    }
-
-    .bubble-bottom-left:before {
-        content: "";
-        width: 0px;
-        height: 0px;
-        position: absolute;
-        border-left: 24px solid #fff;
-        border-right: 12px solid transparent;
-        border-top: 12px solid #fff;
-        border-bottom: 20px solid transparent;
-        left: 32px;
-        bottom: -24px;
-    }
-
-    .bubble-bottom-right:before {
-        content: "";
-        width: 0px;
-        height: 0px;
-        position: absolute;
-        border-right: 24px solid #fff;
-        border-left: 12px solid transparent;
-        border-top: 12px solid #fff;
-        border-bottom: 20px solid transparent;
-        right: 32px;
-        bottom: -24px;
-    }
-
-    .reversed {
-        -moz-transform: scale(-1, 1);
-        -webkit-transform: scale(-1, 1);
-        -o-transform: scale(-1, 1);
-        -ms-transform: scale(-1, 1);
-        transform: scale(-1, 1);
-    }
-</style>
-
-<style>
     body::-webkit-scrollbar {
         display: none;
     }
@@ -610,13 +537,14 @@
                 </div>
 
                 <div class="contact el">
-                    <div class="bubble bubble-bottom-left bub-five" `editable>link with me</div>
-                    <div class="bubble bubble-bottom-left bub-four hidden" contenteditable>email me</div>
-                    <div class="bubble bubble-bottom-left bub-three hidden" contenteditable onclick="copy()">copy my
-                        email</div>
-                    <div class="bubble bubble-bottom-right bub-two hidden" contenteditable>view resume</div>
-                    <div class="bubble bubble-bottom-right bub-one hidden" contenteditable>view git repo</div>
-                    <p style="color:#E8EAE3;">contact me</p>
+    
+                    <p id="contact-desc">connect with me</p>
+                    <!-- email me -->
+                    <!-- copy my email -->
+                    <!-- view resume -->
+                    <!-- view git repo -->
+                    <!-- link with me -->
+
                     <p>
                         <a href="https://github.com/sindura-sriram/sindura-sriram.github.io" target="_blank"
                             rel="noopener noreferrer"><i class="contact-icon fab fa-github" id="source-code"></i></a>
@@ -624,7 +552,7 @@
                         <a href="./resume.pdf" target="_blank" rel="noopener noreferrer" download><i id="resume"
                                 class="contact-icon resume fas fa-file-download"></i></a>
                         &nbsp;&nbsp;
-                        <i class="contact-icon fas fa-clipboard" id="copy-email"></i>
+                        <i class="contact-icon fas fa-clipboard" id="copy-email" onclick="copy()"></i>
                         &nbsp;&nbsp;
                         <a href="mailto:sindura_sriram@brown.edu"><i id="email"
                                 class="contact-icon mail fas fa-envelope-square" target="_blank"
@@ -635,6 +563,8 @@
                             rel="noopener noreferrer"><i id="linkedin"
                                 class="contact-icon linkedin fab fa-linkedin"></i></a>
                     </p>
+                    
+
                 </div>
             </div>
         </section>
@@ -679,155 +609,23 @@
         }
 
 
-        bubble1 = document.getElementsByClassName("bub-one")[0]
-        bubble2 = document.getElementsByClassName("bub-two")[0]
-        bubble3 = document.getElementsByClassName("bub-three")[0]
-        bubble4 = document.getElementsByClassName("bub-four")[0]
-        bubble5 = document.getElementsByClassName("bub-five")[0]
+        var msg = document.getElementById("contact-desc");
 
         document.getElementById("resume").addEventListener("mouseover", function () {
-
-            // bubble-right
-            // bub-two
-            if (bubble2.classList.contains("hidden")) {
-                bubble2.classList.remove("hidden");
-            }
-
-            if (!bubble1.classList.contains("hidden")) {
-                bubble1.classList.add("hidden");
-            }
-            if (!bubble3.classList.contains("hidden")) {
-                bubble3.classList.add("hidden");
-            }
-            if (!bubble4.classList.contains("hidden")) {
-                bubble4.classList.add("hidden");
-            }
-            if (!bubble5.classList.contains("hidden")) {
-                bubble5.classList.add("hidden");
-            }
+            msg.innerText = "view my resume";
         });
-        document.getElementById("resume").addEventListener("mouseout", function () {
-            // bubble-left
-            // bub-three
-
-            if (!bubble3.classList.contains("hidden")) {
-                bubble3.classList.add("hidden");
-            }
-            if (!bubble1.classList.contains("hidden")) {
-                bubble1.classList.add("hidden");
-            }
-            if (!bubble2.classList.contains("hidden")) {
-                bubble2.classList.add("hidden");
-            }
-            if (!bubble4.classList.contains("hidden")) {
-                bubble4.classList.add("hidden");
-            }
-            if (!bubble5.classList.contains("hidden")) {
-                bubble5.classList.add("hidden");
-            }
-        });
+        
         document.getElementById("email").addEventListener("mouseover", function () {
-
-            // bubble-left
-            // bub-four
-            if (bubble4.classList.contains("hidden")) {
-                bubble4.classList.remove("hidden");
-            }
-
-            if (!bubble1.classList.contains("hidden")) {
-                bubble1.classList.add("hidden");
-            }
-            if (!bubble3.classList.contains("hidden")) {
-                bubble3.classList.add("hidden");
-            }
-            if (!bubble2.classList.contains("hidden")) {
-                bubble2.classList.add("hidden");
-            }
-            if (!bubble5.classList.contains("hidden")) {
-                bubble5.classList.add("hidden");
-            }
+            msg.innerText = "email me";
         });
-        document.getElementById("email").addEventListener("mouseout", function () {
-            // bubble-left
-            // bub-three
 
-            if (!bubble3.classList.contains("hidden")) {
-                bubble3.classList.add("hidden");
-            }
-            if (!bubble1.classList.contains("hidden")) {
-                bubble1.classList.add("hidden");
-            }
-            if (!bubble2.classList.contains("hidden")) {
-                bubble2.classList.add("hidden");
-            }
-            if (!bubble4.classList.contains("hidden")) {
-                bubble4.classList.add("hidden");
-            }
-            if (!bubble5.classList.contains("hidden")) {
-                bubble5.classList.add("hidden");
-            }
-        });
+       
         document.getElementById("linkedin").addEventListener("mouseover", function () {
-            // bubble-left
-            // bub-five
-
-            if (bubble5.classList.contains("hidden")) {
-                bubble5.classList.remove("hidden");
-            }
-
-            if (!bubble1.classList.contains("hidden")) {
-                bubble1.classList.add("hidden");
-            }
-            if (!bubble3.classList.contains("hidden")) {
-                bubble3.classList.add("hidden");
-            }
-            if (!bubble4.classList.contains("hidden")) {
-                bubble4.classList.add("hidden");
-            }
-            if (!bubble2.classList.contains("hidden")) {
-                bubble2.classList.add("hidden");
-            }
+            msg.innerText = "connect with me on linkedin";
         });
-        document.getElementById("linkedin").addEventListener("mouseout", function () {
-            // bubble-left
-            // bub-three
 
-            if (!bubble3.classList.contains("hidden")) {
-                bubble3.classList.add("hidden");
-            }
-            if (!bubble1.classList.contains("hidden")) {
-                bubble1.classList.add("hidden");
-            }
-            if (!bubble2.classList.contains("hidden")) {
-                bubble2.classList.add("hidden");
-            }
-            if (!bubble4.classList.contains("hidden")) {
-                bubble4.classList.add("hidden");
-            }
-            if (!bubble5.classList.contains("hidden")) {
-                bubble5.classList.add("hidden");
-            }
-        });
         document.getElementById("copy-email").addEventListener("mouseover", function () {
-            // bubble-left
-            // bub-three
-
-            if (bubble3.classList.contains("hidden")) {
-                bubble3.classList.remove("hidden");
-            }
-
-            if (!bubble1.classList.contains("hidden")) {
-                bubble1.classList.add("hidden");
-            }
-            if (!bubble2.classList.contains("hidden")) {
-                bubble2.classList.add("hidden");
-            }
-            if (!bubble4.classList.contains("hidden")) {
-                bubble4.classList.add("hidden");
-            }
-            if (!bubble5.classList.contains("hidden")) {
-                bubble5.classList.add("hidden");
-            }
+            msg.innerText = "copy email address";
         });
         document.getElementById("copy-email").addEventListener("click", function () {
             // Get the desired text to copy
@@ -844,68 +642,28 @@
             document.execCommand("copy");
             // remove the input from the document
             document.body.removeChild(input);
+
+            msg.innerText = "email copied";
+        });
+
+        document.getElementById("source-code").addEventListener("mouseover", function () {
+            msg.innerText = "view site repo";
+        });
+
+        document.getElementById("resume").addEventListener("mouseout", function () {
+            msg.innerText = "\n";
+        });
+        document.getElementById("email").addEventListener("mouseout", function () {
+            msg.innerText = "\n";
+        });
+        document.getElementById("linkedin").addEventListener("mouseout", function () {
+            msg.innerText = "\n";
         });
         document.getElementById("copy-email").addEventListener("mouseout", function () {
-            // bubble-left
-            // bub-three
-
-            if (!bubble3.classList.contains("hidden")) {
-                bubble3.classList.add("hidden");
-            }
-            if (!bubble1.classList.contains("hidden")) {
-                bubble1.classList.add("hidden");
-            }
-            if (!bubble2.classList.contains("hidden")) {
-                bubble2.classList.add("hidden");
-            }
-            if (!bubble4.classList.contains("hidden")) {
-                bubble4.classList.add("hidden");
-            }
-            if (!bubble5.classList.contains("hidden")) {
-                bubble5.classList.add("hidden");
-            }
-        });
-        document.getElementById("source-code").addEventListener("mouseover", function () {
-
-            // bubble-right
-            // bub-one
-
-            if (bubble1.classList.contains("hidden")) {
-                bubble1.classList.remove("hidden");
-            }
-
-            if (!bubble2.classList.contains("hidden")) {
-                bubble2.classList.add("hidden");
-            }
-            if (!bubble3.classList.contains("hidden")) {
-                bubble3.classList.add("hidden");
-            }
-            if (!bubble4.classList.contains("hidden")) {
-                bubble4.classList.add("hidden");
-            }
-            if (!bubble5.classList.contains("hidden")) {
-                bubble5.classList.add("hidden");
-            }
+            msg.innerText = "\n";
         });
         document.getElementById("source-code").addEventListener("mouseout", function () {
-            // bubble-left
-            // bub-three
-
-            if (!bubble3.classList.contains("hidden")) {
-                bubble3.classList.add("hidden");
-            }
-            if (!bubble1.classList.contains("hidden")) {
-                bubble1.classList.add("hidden");
-            }
-            if (!bubble2.classList.contains("hidden")) {
-                bubble2.classList.add("hidden");
-            }
-            if (!bubble4.classList.contains("hidden")) {
-                bubble4.classList.add("hidden");
-            }
-            if (!bubble5.classList.contains("hidden")) {
-                bubble5.classList.add("hidden");
-            }
+            msg.innerText = "\n";
         });
     </script>
 
