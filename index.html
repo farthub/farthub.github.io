@@ -721,7 +721,6 @@
                 label3 = labels[2]
 
                 label = this.innerText
-                console.log("You clicked:", label);
 
                 this.classList.add('bold');
 
@@ -797,23 +796,12 @@
         var down = document.getElementById("down-arrow");
         var slide = 0
 
-        // var howFarFromTop = $(document).scrollTop(); //how far from the top have we scrolled?
-        // var currentWindowHeight = $(window).height(); //current window height for responsiveness
-        // var currentSlide = Math.floor(howFarFromTop / currentWindowHeight); //approximate which slide is on screen at the moment
-
-        // up.addEventListener("click", function () {
-        //     smoothScroll(currentWindowHeight * (currentSlide));
-        // });
-
-        // down.addEventListener("click", function () {
-        //     smoothScroll(currentWindowHeight * (currentSlide + 1));
-        // });
-
         var section_one = document.getElementById("home");
         var section_two = document.getElementById("nlp");
         var section_three = document.getElementById("vision");
         var section_four = document.getElementById("data");
         var section_five = document.getElementById("about");
+        var secs = [section_one, section_two, section_three, section_four, section_five];
 
         const buttons = {
             up: document.getElementById("up-arrow"),
@@ -862,14 +850,37 @@
         }
 
         function removePressed() {
-            var secs = [section_one, section_two, section_three, section_four, section_five];
-
             for (sec of secs) {
-                if (sec.classList.contains("pressed")) {
-                    sec.classList.remove("pressed");
+                if (sec.classList.contains(ACTIVE_CLASS)) {
+                    sec.classList.remove(ACTIVE_CLASS);
                 }
             }
         }
+
+        section_one.addEventListener("click", function(){
+            removePressed();
+            section_one.classList.add(ACTIVE_CLASS);
+        });
+
+        section_two.addEventListener("click", function(){
+            removePressed();
+            section_two.classList.add(ACTIVE_CLASS);
+        });
+
+        section_three.addEventListener("click", function(){
+            removePressed();
+            section_three.classList.add(ACTIVE_CLASS);
+        });
+
+        section_four.addEventListener("click", function(){
+            removePressed();
+            section_four.classList.add(ACTIVE_CLASS);
+        });
+
+        section_five.addEventListener("click", function(){
+            removePressed();
+            section_five.classList.add(ACTIVE_CLASS);
+        });
 
         function checkValidMove(slide) {
 
