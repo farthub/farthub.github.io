@@ -124,8 +124,8 @@ body {
 
 .ruler{
     position: absolute;
-    top: 65%;
-    left: -5%;
+    top: 68%;
+    left: -10%;
 }
 .pencil{
     position: absolute;
@@ -179,8 +179,8 @@ body {
 
 .icons.loaded .ruler{
     position: absolute;
-    top: 65%;
-    left: -5%;
+    top: 68%;
+    left: -10%;
     animation: shift 6s 0.01s infinite;
 }
 .icons.loaded .pencil{
