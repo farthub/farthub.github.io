@@ -2,990 +2,124 @@
 <html lang="en">
 
 <head>
-    <title>Sindura Sriram</title>
-    <link rel="icon" type="image/x-icon" href="fav/favicon.ico?v=1" />
+    <title>Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="icon" type="image/png" href="icons/Cube@2x.png" />
+    <style>
+        .webpage-content {
+            height: 300vh;
+            background-color: white;
+        }
 
-    <script src="https://kit.fontawesome.com/e1dbc294ab.js" crossorigin="anonymous"></script>
+        .row.content {
+            height: 100%;
+        }
 
-    <link href="nav-index.css" rel="stylesheet" type="text/css">
-    <link href="load.css" rel="stylesheet" type="text/css">
-    <link href="fonts.css" rel="stylesheet" type="text/css">
-    <link href="style.css" rel="stylesheet" type="text/css">
+        .sidenav {
+            padding-top: 20px;
+            background-color: #daf0fd;
+            height: 100%;
+            text-align: left;
+        }
 
-    <link rel="stylesheet" href="busy-page-menu1.css">
-    <link rel="stylesheet" href="nlp_style.css">
-    <link rel="stylesheet" href="about-style.css">
+        .landing {
+            width: 60%;
+            margin: auto auto;
+            height: 100%;
+        }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+        .project {
+            width: 40%;
+            margin: auto auto;
+            text-align: justify;
+        }
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+        footer {
+            background-color: #fe3e4f;
+            color: white;
+            padding: 15px;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
 </head>
 
-<style>
-    html {
-        scroll-behavior: smooth;
-    }
-
-    .year {
-        color: darkgray;
-    }
-
-    .over{
-        color:#305BD1;
-    }
-</style>
-
-<style>
-    body::-webkit-scrollbar {
-        display: none;
-    }
-
-    /* Hide scrollbar for IE, Edge and Firefox */
-    body {
-        -ms-overflow-style: none;
-        /* IE and Edge */
-        scrollbar-width: none;
-        /* Firefox */
-        background-color: #E8EAE3;
-    }
-
-    .button .page_label {
-        visibility: hidden;
-        width: 0%;
-        opacity: 0%;
-        height: 2rem;
-        transition: all 0.5s;
-    }
-
-    .button:hover .page_label {
-        visibility: visible;
-        width: 100%;
-        opacity: 100%;
-    }
-</style>
-
-<style>
-    /* Page content */
-    .content {
-        padding: 16px;
-    }
-
-    /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-    .stick {
-        position: fixed;
-        top: 0;
-    }
-
-    /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-    .stick+.content {
-        padding-top: 60px;
-    }
-</style>
-
-<style>
-    .data_projects {
-        /* text-align: center; */
-        display: grid;
-        grid-template-rows: 25% 25% 25% 25%;
-        width: 80%;
-    }
-
-    .data-project {
-        width: 80%;
-        text-align: justify;
-        font-size: 1.5vh;
-        margin: auto;
-        /* margin: auto auto; */
-    }
-
-    .project-title {
-        font-weight: 900;
-        text-transform: uppercase;
-        font-size: 3vh;
-    }
-
-    .project-title-1 {
-        font-weight: 900;
-        text-transform: uppercase;
-        font-size: 2.5vh;
-    }
-
-    .cv_projects {
-        background-color: #E8EAE3;
-        display: grid;
-        grid-template-rows: 50% 50%;
-        width: 80%;
-        margin: auto;
-    }
-
-    .cv_project {
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-
-    .cv-text {
-        display: block;
-        margin: auto auto;
-        font-size: 2vh;
-    }
-
-    .cv-image {
-        margin-top: 35%;
-    }
-</style>
-
 <body>
-    <div class="load">
-        <div class="middle">
-            <div class="loadingio-spinner-dual-ball-saq2l5iqxlp">
-                <div class="ldio-jogel4x0fe7">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+
+    <div class="webpage-content container-fluid text-center">
+        <div class="row content">
+            <div class="col-sm-2 sidenav">
+                <img class="img-responsive" src="./icons/Cube@2x.png">
+                <p style="font-size: 3vh; padding-top: 1vh;">Portfolio<a href="#">*</a></p>
+                <p><a href="#">Case Study A?</a></p>
+                <p><a href="#">About?</a></p>
+                <p><a href="#">Contact?</a></p>
+            </div>
+            <div class="col-sm-10 text-center" style="display: block;">
+                <div class="landing">
+                    <div style="border: 1px solid black; height: 50rem; display: flex; margin: 5rem;">
+                        <p style="margin: auto auto;">welcome to this page, <br> welcome to me</p>
+                    </div>
                 </div>
+                <div class="project">
+                    <h1>Case Study A</h1>
+                    <div style="border: 1px solid black; height: 30rem; display: flex; margin: 5rem;">
+                        <p style="margin: auto auto;">relevant graphic</p>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                        qui
+                        officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="#">link to project</a></p>
+                    <hr>
+                </div>
+
+                <div class="project">
+                    <h1>Case Study B</h1>
+                    <div style="border: 1px solid black; height: 30rem; display: flex; margin: 5rem;">
+                        <p style="margin: auto auto;">relevant graphic</p>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                        qui
+                        officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="#">link to project</a></p>
+                    <hr>
+                </div>
+
+                <div class="project">
+                    <p>more projects..</p>
+                </div>
+
             </div>
         </div>
     </div>
 
-    <div class="contents" id="fullpage">
-        <section class="section page" id="sec1">
-            <div class="landing-page">
-                <div class="icons">
-                    <img src="icons/macbook.png" id="laptop" alt="laptop" draggable="false" (dragstart)="false;"
-                        class="unselectable">
-                    <img class="pencil obj" src="icons/pencil2x.png" alt="pencil" draggable="false" (dragstart)="false;"
-                        class="unselectable">
-                    <img class="crayon obj" src="icons/crayon12x.png" alt="crayon" draggable="false"
-                        (dragstart)="false;" class="unselectable">
-                    <img class="crayon1 obj" src="icons/crayon22x.png" alt="crayon" draggable="false"
-                        (dragstart)="false;" class="unselectable">
-                    <img class="crayon2 obj" src="icons/crayon32x.png" alt="crayon" draggable="false"
-                        (dragstart)="false;" class="unselectable">
-                    <img class="pen obj" src="icons/pen2x.png" alt="pen" draggable="false" (dragstart)="false;"
-                        class="unselectable">
-                    <img class="pad obj" src="icons/pad@2x.png" alt="pad" draggable="false" (dragstart)="false;"
-                        class="unselectable">
-                    <img class="sphere obj" src="icons/Sphere@2x.png" alt="sphere" draggable="false"
-                        (dragstart)="false;" class="unselectable">
-                    <img class="sticky obj" src="icons/sticky@2x.png" alt="sticky-note" draggable="false"
-                        (dragstart)="false;" class="unselectable">
-                    <img class="ruler obj" src="icons/ruler@2x.png" alt="ruler" draggable="false" (dragstart)="false;"
-                        class="unselectable">
-                    <div class="smile">
-                        <svg id="smile" xmlns="http://www.w3.org/2000/svg" width="350" height="200"
-                            viewBox="0 0 350 200">
-                            <path id="smile_curve" d="m10,50 h200"></path>
-                            <text class="name" width="500" fill="white">
-                                <textPath xlink:href="#smile_curve" id="text-path">
-                                    sindura_sriram$
-                                    <set id="t7" attributeName="visibility" from="hidden" to="visible"
-                                        begin="t5.begin+2.5s" />
-                                </textPath>
-                            </text>
-                            <path id="smile_curve_" d="m160,50 h50"></path>
-                            <text class="name type1" width="50" fill="white">
-                                <textPath xlink:href="#smile_curve_" id="text-path">
-                                    <tspan class="blinker">&#9612;</tspan>
-                                    <set id="t7" attributeName="visibility" from="hidden" to="visible"
-                                        begin="t5.begin+3s" />
-                                    <set id="t7_" attributeName="visibility" from="visible" to="hidden"
-                                        begin="t7.begin+3s" />
-                                </textPath>
-                            </text>
-                            <text class="name type2" width="50" fill="white">
-                                <textPath xlink:href="#smile_curve_" id="text-path">
-                                    l<tspan class="blinker">&#9612;</tspan>
-                                    <set id="t8" attributeName="visibility" from="hidden" to="visible"
-                                        begin="t7.begin+3s" />
-                                    <set id="t8_" attributeName="visibility" from="visible" to="hidden"
-                                        begin="t8.begin+1s" />
-                                </textPath>
-                            </text>
-                            <text class="name type3" width="50" fill="white">
-                                <textPath xlink:href="#smile_curve_" id="text-path">
-                                    ls<tspan class="blinker">&#9612;</tspan>
-                                    <set id="t9" attributeName="visibility" from="hidden" to="visible"
-                                        begin="t8.begin+1s" />
-                                    <set id="t9_" attributeName="visibility" from="visible" to="hidden"
-                                        begin="t9.begin+2s" />
-                                </textPath>
-                            </text>
-                            <text class="name type3" width="50" fill="white">
-                                <textPath xlink:href="#smile_curve_" id="text-path">
-                                    ls
-                                    <set id="t10" attributeName="visibility" from="hidden" to="visible"
-                                        begin="t9.begin+2s" />
-                                </textPath>
-                            </text>
-
-                            <path id="sc2" d="m5,85 h350"></path>
-                            <text class="name" width="500" fill="white">
-                                <textPath xlink:href="#sc2" id="text-path">
-                                    ./about_me ./computer_vision
-                                    <set id="t11" attributeName="visibility" from="hidden" to="visible"
-                                        begin="t10.begin+0.2s" />
-                                </textPath>
-                            </text>
-                            <path id="sc3" d="m0,115 h350"></path>
-                            <text class="name" width="500" fill="white">
-                                <textPath xlink:href="#sc3" id="text-path">
-                                    <!-- ./web_design  ./visual_art-->
-                                    &#8239; ./nlp ./systems_&_data
-                                    <set id="t12" attributeName="visibility" from="hidden" to="visible"
-                                        begin="t10.begin+0.3s" />
-                                </textPath>
-                            </text>
-
-                            <path id="smile_curve3" fill="white" data-name="Color Fill 1" class="cls-1"
-                                d="M0,100 l150,0" />
-                            <text class="login1" width="500" fill="white">
-                                <textPath xlink:href="#smile_curve3" id="text-path">
-                                    <tspan class="password">password:</tspan>
-                                    <set id="t3" attributeName="visibility" from="hidden" to="visible"
-                                        begin="indefinite" />
-                                    <set id="t6" attributeName="visibility" from="visible" to="hidden"
-                                        begin="t5.begin+1.5s" />
-                                </textPath>
-                            </text>
-                            <path id="smile_curve4" fill="white">
-                                <animate id="t4" attributeName="d" from="m100,100 h0" to="m100,100 h150" dur="4s"
-                                    begin="t3.begin+3.5s" repeatCount="1" fill="freeze" />
-                            </path>
-                            <text class="login" width="500" fill="white">
-                                <textPath xlink:href="#smile_curve4" id="text-path">
-                                    &#9679; &#9679; &#9679; &#9679; &#9679; &#9679; &#9679; &#9679;
-                                </textPath>
-                                <set id="t5" attributeName="fill" from="white" to="#FA2742" begin="t4.end" />
-                                <set id="t6" attributeName="visibility" from="visible" to="hidden"
-                                    begin="t5.begin+1.5s" />
-                            </text>
-                            <path id="smile_curve5" fill="white" data-name="Color Fill 1" class="cls-1"
-                                d="M0,150 l350,0" />
-                            <text class="name" width="500" fill="white">
-                                <textPath xlink:href="#smile_curve5" id="text-path">
-                                    &#8239;sindura_sriram$ <tspan class="blinker">&#9612;</tspan>
-                                    <set id="t12" attributeName="visibility" from="hidden" to="visible"
-                                        begin="t11.begin+1s" />
-                                </textPath>
-                            </text>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-
-            <a href="index.html" class="title">
-                <span>Sindura<br>Sriram</span>
-            </a>
-        </section>
-
-        <section class="page-container section page" id="sec2">
-            <div class="main">
-                <div class="image-box">
-                    <div class="column"></div>
-                    <div class="column">
-                        <div class="content">
-                            <div class="circle3"></div>
-                            <div class="key1">Data Flow</div>
-                            <div class="key2">NLP Pipeline</div>
-                            <div class="circle4"></div>
-                            <div class="circle1">
-                            </div>
-                            <p class='nlp_caption'>Data Lake <i class="fas fa-tint"></i></p>
-                            <div class="line"></div>
-                            <div class="circle2"></div>
-                            <p class='nlp_caption_1'>Data Cleaning</p>
-                            <div class="line"></div>
-                            <div class="circle1">
-                            </div>
-                            <p class='nlp_caption'>Database <i class="fas fa-database"></i></p>
-                            <div class="line"></div>
-                            <div class="circle2"></div>
-                            <p class='nlp_caption_1 bold'>Text Analysis</p>
-                            <div class="line"></div>
-                            <div class="circle1"></div>
-                            <p class='nlp_caption'>DBMS <i class="fas fa-network-wired"></i></p>
-                            <div class="line"></div>
-                            <div class="circle2"></div>
-                            <p class='nlp_caption_1'>Edge Prediction</p>
-                            <div class="line"></div>
-                            <div class="circle1"></div>
-                            <p class='nlp_caption'>Data Table <i class="fas fa-table"></i></p>
-                        </div>
-                    </div>
-                    <div class="column"></div>
-                </div>
-                <div class="main-text-box">
-                    <h1>projects in</h1>
-                    <p style="text-transform:uppercase;">Natural Language Processing</p>
-                </div>
-            </div>
-            <div class="projects">
-                <div class="description">
-                    <h1 style="text-transform: uppercase;">Information Extraction and Prediction for Drug Repurposing
-                        <span class="year">(2021)</span>
-                    </h1>
-                    <p>
-                        Drug Discovery and Development has always been a field where efficiency is a priority, given
-                        that new solutions could serve to greatly benefit many communities. However, the different
-                        rounds of testing and research require that lots of time and resources be invested in every
-                        solution a Pharma company is exploring. This project seeks to predict which solutions deserve
-                        the most investment by performing Information Extraction on legacy data to establish past
-                        trends. Then, the data extracted from legacy research can either be compared with trends in
-                        patent records and scientific literature to form Time Series-based predictions, or inputted into
-                        Network Graph-based analysis to output new likely relationships.
-                    </p>
-                </div>
-                <div class="project step">
-                    <div class="text-box">
-                        <p id='nlp-step-icon'>
-                            <img style="width:50%; margin: auto auto;" src="./code_icons/text_analysis.png" alt="">
-                        </p>
-                        <h1 id='nlp-step-title'>Text Analysis</h1>
-                    </div>
-                    <p id='nlp-step-text' class="project-description">
-                        Building an NER (Named Entity Recognition) model to obtain "drug", "target", "disease", and
-                        "species" entities from preprocessed text, achieving a F1 score of 98%. Extracting entities from
-                        legacy data.
-                        <br>
-                        <br>
-                        <br>
-                        Skills : Bio-Entity Recognition
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="page-container section page" id="sec3">
-            <div class="main">
-                <div class="image-box">
-                    <img class="main-illus-image" src="icons/image1.png" alt="illustration">
-                </div>
-                <div class="main-text-box">
-                    <h1>projects in</h1>
-                    <p style="text-transform:uppercase;">Computer Vision</p>
-                </div>
-            </div>
-            <div class="cv_projects">
-                <div class='cv_project'>
-                    <div class="cv-text">
-                        <p class="project-title">Optical Character Recognition "in the wild" <span
-                                class="year">(2021)</span></p>
-                        <p>Developing text recognition functionality to classify complex instances in natural scenes for
-                            a Visual Prosthesis device. See an example result <a href="ocr-image.html" target="_blank"
-                                rel="noopener noreferrer">here</a>.</p>
-                        <p>Skills : Deep Learning, TensorFlow, Keras, Text Detection, Text Classification</p>
-                    </div>
-                    <img class="cv-image" style="width: 40%;" src="./code_icons/ocr7.png" alt="">
-                </div>
-                <div class='cv_project'>
-                    <div class="cv-text">
-                        <p class="project-title">Facial Recognition and Filters <span class="year">(2020)</span></p>
-                        <p>Implementing & comparing four Facial Recognition techniques: Facial Landmarks, Eigenfaces,
-                            Fisherfaces (similar to Eigenfaces), and Deep Learning using the VGG-Face Model. Read full
-                            paper <a href="facial-recog-paper.html" target="_blank" rel="noopener noreferrer">here</a>.
-                        </p>
-                        <p>Skills : TensorFlow, Keras, scikit-learn, opencv-python</p>
-                    </div>
-                    <img class="cv-image" style="width: 40%;" src="./code_icons/facial_recognition.png" alt="">
-                </div>
-
-            </div>
-        </section>
-
-        <section class="page-container section page" id="sec4">
-            <div class="main">
-                <div class="image-box">
-                    <img class="main-illus-image" src="icons/network_diagram_1.png" alt="illustration">
-                </div>
-                <div class="main-text-box">
-                    <h1>projects in</h1>
-                    <p style="text-transform:uppercase;">Systems & Data</p>
-                </div>
-            </div>
-            <div class="data_projects">
-                <div class="data-project">
-                    <p class="project-title-1"><i class="fas fa-syringe"></i> COVID-19 Vaccine Tracker <span
-                            class="year">(2021)</span></p>
-                    <p>A <a href="./vaccine-tracker.html" style="color:black;" target="_blank"
-                            rel="noopener noreferrer">data visualization</a> for COVID-19 vaccination rates in the US,
-                        updated daily, showing the rate of and number of people vaccinated in each
-                        state, made with US Census and CDC data. Used Python and GeoPandas for initial analysis, and
-                        GeoJSONs and d3.js for web application.</p>
-                    <p>Written in JavaScript.</p>
-                    <p>Skills : Pandas & GeoPandas, Geospatial Data Visualization, d3.js</p>
-                </div>
-                <div class="data-project">
-                    <p class="project-title-1"><i class="fas fa-seedling"></i> Climate & Crop <span
-                            class="year">(2021)</span></p>
-                    <p>Evaluated the relationship between climate change and national crop yield through regression
-                        analysis, sourced from NASA and PANGEA, and visualized as a <a href="./viz-index.html"
-                            style="color:black;" target="_blank" rel="noopener noreferrer">Gapminder visualization</a>.
-                    </p>
-                    <p>Written in Python, SQL, JavaScript.</p>
-                    <p>Skills : Data mining & wrangling, ML modeling, Statistic analysis, d3.js</p>
-
-                </div>
-                <div class="data-project">
-                    <p class="project-title-1"><i class="fas fa-terminal"></i> Shell <span class="year">(2020)</span>
-                    </p>
-                    <p>Implemented a shell interface system, controlling system operations. Learned how to manage
-                        systems, concurrent procedures, and batch processes.</p>
-                    <p>Written in C.</p>
-                    <p>Skills : Signal Processing, Handling Multiple Jobs, I/O Redirects</p>
-                </div>
-                <div class="data-project">
-                    <p class="project-title-1"><i class="fas fa-sitemap"></i> Database <span class="year">(2020)</span>
-                    </p>
-                    <p>Built a hierarchical modeled database and implemented both client and server interfaces. Built
-                        server to handle multiple client connections while maintaining data integrity and thread-safety.
-                    </p>
-                    <p>Written in C.</p>
-                    <p>Skills : Networking, Multithreading, Thread Safety, Signal Handling</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="about-page-container section page" id="sec5">
-
-            <div class="about-container">
-
-                <div class="languages">
-                    <div class="lang-box">
-                        <p class="language english">SINDURA SRIRAM</p>
-                        <p class="language tamil">சிந்துரா ஸ்ரீராம் <span class="lang-name" id="tam">· தமிழ்</span></p>
-                        <p class="language chinese">司愛悅 <span class="lang-name" id="chin">· 中文</span></p>
-
-                    </div>
-
-                </div>
-
-                <div class="bio">
-                    <img src="icons/sindura.jpg" alt="sindura">
-
-                    <div class="paragraph">
-                        <p>Hi, I'm Sindura, a software developer based in the SF Bay Area. I'm a 2021 graduate of
-                            Brown University, where I majored in Applied Math and Computer Science. </p>
-
-                        <p>At Brown, I have explored Computer Science as a tool for communication and analysis,
-                            beginning with my work in writing, editing, and web
-                            design -- see <a href="https://www.theindy.org/" target="_blank"
-                                rel="noopener noreferrer">theindy.org</a>, Brown's weekly art and culture newspaper. For
-                            my undergraduate <a href="viz-index.html" target="_blank" rel="noopener noreferrer">capstone
-                                project</a> in Data Science, I have tried to measure
-                            the impact of
-                            climate change on US agriculture through regression analysis of temperature change and crop
-                            yield.
-                        </p>
-                        <p>I'm interested in building new solutions to solve problems old and new. Reach out to me and
-                            I'd be happy to chat with you!</p>
-                    </div>
-
-
-                </div>
-
-                <div class="skills el">
-
-
-                    <i title="Python" style="font-size: 2rem;" class="fab fa-python"></i>
-                    <i title="Java" style="font-size: 2rem;" class="fab fa-java"></i>
-                    <i title="C" style="font-size: 2rem;" class="fa-solid fa-c"></i>
-                    <i title="Linux OS" style="font-size: 2rem;" class="fab fa-linux"></i>
-                    <!-- <i title="HTML" style="font-size: 2rem;" class="fab fa-html5"></i> -->
-                    <!-- <i title="CSS" style="font-size: 2rem;" class="fab fa-css3-alt"></i> -->
-                    <!-- <i title="Bootstrap" style="font-size: 2rem;" class="fa-brands fa-bootstrap"></i> -->
-                    <i title="JavaScript" style="font-size: 2rem;" class="fab fa-js-square"></i>
-                    <i title="Figma" style="font-size: 2rem;" class="fa-brands fa-figma"></i>
-
-                    <i title="R" style="font-size: 2rem;" class="fab fa-r-project"></i>
-                    <i title="Unity" style="font-size: 2rem;" class="fab fa-unity"></i>
-
-                    <img title="MySQL" style="width: 2rem;" src="code_icons/mysql.png" alt="MySQL">
-                    <img title="Spark" style="width: 2rem;" src="code_icons/spark.png" alt="Spark">
-                    <img title="pandas" style="width: 2rem;" src="code_icons/pandas.png" alt="pandas">
-                    <img title="geopandas" style="width: 2rem;" src="code_icons/geopandas_black.png" alt="geopandas">
-
-                    <img title="Tableau" style="width: 2rem;" src="code_icons/tableau_black.png" alt="Tableau">
-                    <img title="Cytoscape" style="width: 2rem;" src="code_icons/cytoscape.png" alt="Cytoscape">
-                    <img title="OpenCV" style="width: 2rem;" src="code_icons/opencv.png" alt="OpenCV">
-                    <img title="PyTorch" style="width: 2rem;" src="code_icons/pytorch.png" alt="PyTorch">
-                    <img title="MongoDB" style="width: 2rem;" src="code_icons/mongodb.png" alt="NoSQL">
-                    <img title="MATLAB" style="width: 2rem;" src="code_icons/matlab_black.png" alt="MATLAB">
-
-                    <img title="spacy" style="width: 2rem;" src="code_icons/spacy.png" alt="spacy">
-                    <!-- <img title="John Snow Labs Spark NLP" style="width: 2rem;" src="code_icons/johnsnowlabs.png" -->
-                    <!-- alt="Spark NLP"> -->
-
-
-                    <img title="tensorflow" style="width: 2rem;" src="code_icons/keras.png" alt="Tensorflow">
-                    <img title="keras" style="width: 2rem;" src="code_icons/k.png" alt="Keras">
-                    <img title="scikit-learn" style="width: 2rem;" src="code_icons/sklearn.png" alt="SciKit-Learn">
-                    <img title="D3.js" style="width: 2rem;" src="code_icons/d3.png" alt="D3.js">
-
-                    <!-- numpy -->
-                    <!-- gensim -->
-                    <!-- nltk -->
-
-
-
-                    <img title="NumPy" style="width: 2rem;" src="code_icons/numpy.png" alt="NumPy">
-
-
-                </div>
-
-                <div class="contact el">
-    
-                    <p id="contact-desc">connect with me</p>
-                    <!-- email me -->
-                    <!-- copy my email -->
-                    <!-- view resume -->
-                    <!-- view git repo -->
-                    <!-- link with me -->
-
-                    <p>
-                        <a href="https://github.com/sindura-sriram/sindura-sriram.github.io" target="_blank"
-                            rel="noopener noreferrer"><i class="contact-icon fab fa-github" id="source-code"></i></a>
-                        &nbsp;&nbsp;
-                        <a href="./resume.pdf" target="_blank" rel="noopener noreferrer" download><i id="resume"
-                                class="contact-icon resume fas fa-file-download"></i></a>
-                        &nbsp;&nbsp;
-                        <i class="contact-icon fas fa-clipboard" id="copy-email" onclick="copy()"></i>
-                        &nbsp;&nbsp;
-                        <a href="mailto:sindura_sriram@brown.edu"><i id="email"
-                                class="contact-icon mail fas fa-envelope-square" target="_blank"
-                                rel="noopener noreferrer"></i></a>
-
-                        &nbsp;&nbsp;
-                        <a href="https://www.linkedin.com/in/sindura-sriram/" target="_blank"
-                            rel="noopener noreferrer"><i id="linkedin"
-                                class="contact-icon linkedin fab fa-linkedin"></i></a>
-                    </p>
-                    
-
-                </div>
-            </div>
-        </section>
-
-
-        <div class="nav">
-            <a id="home" href="#sec1" class="button pressed">
-                <p> <span class='page_label'>Home</span> <i class="fas fa-home"></i></p>
-            </a>
-            <a id="nlp" href="#sec2" class="button">
-                <p> <span class='page_label'>NLP</span> <i class="fas fa-comment"></i></p>
-            </a>
-            <a href="#sec3" id="vision" class="button">
-                <p> <span class='page_label'>Computer Vision</span> <i class="fas fa-glasses"
-                        style="transform:translateX(0.1vw);"></i> </p>
-            </a>
-            <a href="#sec4" id="data" class="button">
-                <p> <span class='page_label'> Systems & Data</span> <i class="fas fa-database"></i>
-                </p>
-            </a>
-            <a href="#sec5" id="about" class="button">
-                <p> <span class='page_label'>About Me</span> <i class="fas fa-info-circle"></i>
-                </p>
-            </a>
-        </div>
-
-        <div id="scroll-nav" class="scroll">
-            <p>
-                <i id="up-arrow" class="fas fa-arrow-up arrow invalid"></i>
-                <br>
-                <i id="down-arrow" class="fas fa-arrow-down arrow"></i>
-            </p>
-        </div>
-    </div>
-
-    <script src="load.js"></script>
-
-    <script>
-        function copy() {
-            navigator.clipboard.writeText("sindura_sriram@brown.edu");
-            alert("Copied the text: " + copyText.value);
-        }
-
-
-        var msg = document.getElementById("contact-desc");
-
-        document.getElementById("resume").addEventListener("mouseover", function () {
-            msg.innerText = "view my resume";
-        });
-        
-        document.getElementById("email").addEventListener("mouseover", function () {
-            msg.innerText = "email me";
-        });
-
-       
-        document.getElementById("linkedin").addEventListener("mouseover", function () {
-            msg.innerText = "connect with me on linkedin";
-        });
-
-        document.getElementById("copy-email").addEventListener("mouseover", function () {
-            msg.innerText = "copy email address";
-        });
-        document.getElementById("copy-email").addEventListener("click", function () {
-            // Get the desired text to copy
-            var selectText = "sindura_sriram@brown.edu";
-            // Create an input
-            var input = document.createElement('input');
-            // Set it's value to the text to copy, the input type doesn't matter
-            input.value = selectText;
-            // add it to the document
-            document.body.appendChild(input);
-            // call select(); on input which performs a user like selection  
-            input.select();
-            // execute the copy command, this is why we add the input to the document
-            document.execCommand("copy");
-            // remove the input from the document
-            document.body.removeChild(input);
-
-            msg.innerText = "email copied";
-        });
-
-        document.getElementById("source-code").addEventListener("mouseover", function () {
-            msg.innerText = "view site repo";
-        });
-
-        document.getElementById("resume").addEventListener("mouseout", function () {
-            msg.innerText = "\n";
-        });
-        document.getElementById("email").addEventListener("mouseout", function () {
-            msg.innerText = "\n";
-        });
-        document.getElementById("linkedin").addEventListener("mouseout", function () {
-            msg.innerText = "\n";
-        });
-        document.getElementById("copy-email").addEventListener("mouseout", function () {
-            msg.innerText = "\n";
-        });
-        document.getElementById("source-code").addEventListener("mouseout", function () {
-            msg.innerText = "\n";
-        });
-    </script>
-
-    <script>
-        var chinese = document.getElementById("chin");
-        var chineng = document.getElementById("chin-eng");
-
-        chinese.addEventListener("mouseover", function () {
-            chinese.innerText = '· Mandarin Chinese';
-        });
-        chinese.addEventListener("mouseout", function () {
-            chinese.innerText = '· 中文， 簡繁體字';
-        });
-
-        var tamil = document.getElementById("tam");
-        tamil.addEventListener("mouseover", function () {
-            tamil.innerText = "· Tamil";
-        });
-        tamil.addEventListener("mouseout", function () {
-            tamil.innerText = "· தமிழ்";
-        });
-
-    </script>
-
-    <script>
-        // Get the navbar
-        var navbar = document.getElementsByClassName("nav")[0];
-        var nav = document.getElementById("scroll-nav")
-
-        // Get the offset position of the navbar
-        var sticky = navbar.offsetTop;
-
-        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-        function myFunction() {
-            if (window.pageYOffset >= 0) {
-                navbar.classList.add("stick")
-                nav.classList.add("scroll-stick")
-            } else {
-                navbar.classList.remove("stick");
-                nav.classList.remove("scroll-stick");
-            }
-        }
-
-        // When the user scrolls the page, execute myFunction
-        window.onscroll = function () { myFunction() };
-    </script>
-
-    <script>
-        labels = document.getElementsByClassName('nlp_caption_1')
-
-        for (var i = 0; i < labels.length; i++) {
-            labels[i].addEventListener('click', function () {
-                label1 = labels[0]
-                label2 = labels[1]
-                label3 = labels[2]
-
-                label = this.innerText
-
-                this.classList.add('bold');
-
-                title = document.getElementById('nlp-step-title');
-                icon = document.getElementById('nlp-step-icon').children[0];
-                text = document.getElementById('nlp-step-text');
-
-                title.innerText = label;
-
-                if (label == 'Text Analysis') {
-                    text.innerHTML = 'Building an NER (Named Entity Recognition) model to obtain "drug", "target", "disease", and "species" entities from preprocessed text, achieving a F1 score of 98%. Extracting entities from legacy data. <br><br><br> Skills : Bio-Entity Recognition';
-                    label1.classList.remove('bold');
-                    label3.classList.remove('bold');
-                    icon.src = './code_icons/text_analysis.png';
-                }
-                else if (label == 'Edge Prediction') {
-                    text.innerHTML = 'Network graph analysis of extracted biomedical entities and their relations, time-based predictions using scientific and patent literature.<br><br><br> Skills : Deep Knowledge Graph Analysis, Time Series Predictive Modelling';
-                    label1.classList.remove('bold');
-                    label2.classList.remove('bold');
-                    icon.src = './code_icons/edge_prediction2.png';
-                }
-                else {
-                    text.innerHTML = 'Text is extracted from both structured and unstructured data (PPT, DOC, XLS, PDF), and then cleaned, split into sentences, and preprocessed. <br><br><br><br> Skills: Text Mining, Data Cleaning, Sentence Detection';
-                    label2.classList.remove('bold');
-                    label3.classList.remove('bold');
-                    icon.src = './code_icons/preprocessing.png';
-                }
-            });
-        }
-    </script>
-
-    <script>
-        circles = document.getElementsByClassName('circle2');
-
-        for (var i = 0; i < circles.length; i++) {
-            circle = circles[i]
-            label = circle.nextSibling;
-            // console.log(circle);
-            // console.log(label);
-            circle.addEventListener('click', function () {
-                console.log(this.nextElementSibling);
-                this.nextElementSibling.click();
-            });
-        }
-    </script>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-
-    <script>
-        jQuery($ => {
-            // The speed of the scroll in milliseconds
-            const speed = 1000;
-
-            $('a[href*="#"]')
-                .filter((i, a) => a.getAttribute('href').startsWith('#') || a.href.startsWith(`${location.href}#`))
-                .unbind('click.smoothScroll')
-                .bind('click.smoothScroll', event => {
-                    const targetId = event.currentTarget.getAttribute('href').split('#')[1];
-                    const targetElement = document.getElementById(targetId);
-
-                    if (targetElement) {
-                        event.preventDefault();
-                        $('html, body').animate({ scrollTop: $(targetElement).offset().top }, speed);
-                    }
-                });
-        });
-    </script>
-
-    <script>
-        var up = document.getElementById("up-arrow");
-        var down = document.getElementById("down-arrow");
-        var slide = 0
-
-        var section_one = document.getElementById("home");
-        var section_two = document.getElementById("nlp");
-        var section_three = document.getElementById("vision");
-        var section_four = document.getElementById("data");
-        var section_five = document.getElementById("about");
-        var secs = [section_one, section_two, section_three, section_four, section_five];
-
-        const buttons = {
-            up: document.getElementById("up-arrow"),
-            down: document.getElementById("down-arrow")
-        }
-
-        ACTIVE_CLASS = 'pressed';
-
-        function removeActiveClass(e) {
-            console.log('remove')
-            e.target.removeEventListener(e.type, removeActiveClass, false)
-            e.target.classList.remove(ACTIVE_CLASS)
-        }
-
-
-        function smoothScroll(offsetPixels) {
-            if (offsetPixels < 0) { //avoid negative numbers on the scroll up
-                offsetPixels = 0;
-            }
-
-            //this function is just to make an animated scrolling transition
-            $('html, body').animate({
-                scrollTop: offsetPixels
-            }, 300);
-        }
-
-        function pressButton(button) {
-            // if (button.classList.contains(ACTIVE_CLASS)) {
-            //     console.log('reset')
-            //     button.classList.remove(ACTIVE_CLASS);
-            //     return
-            // }
-
-            // button.addEventListener('transitionend', removeActiveClass, false);
-            if (!button.classList.contains("invalid")) {
-                console.log('add')
-                button.classList.add(ACTIVE_CLASS)
-
-
-                setTimeout(function () {
-                    console.log("timeout");
-                    console.log('reset')
-                    button.classList.remove(ACTIVE_CLASS);
-                }, 1000);
-            }
-        }
-
-        function removePressed() {
-            for (sec of secs) {
-                if (sec.classList.contains(ACTIVE_CLASS)) {
-                    sec.classList.remove(ACTIVE_CLASS);
-                }
-            }
-        }
-
-        section_one.addEventListener("click", function(){
-            removePressed();
-            section_one.classList.add(ACTIVE_CLASS);
-        });
-
-        section_two.addEventListener("click", function(){
-            removePressed();
-            section_two.classList.add(ACTIVE_CLASS);
-        });
-
-        section_three.addEventListener("click", function(){
-            removePressed();
-            section_three.classList.add(ACTIVE_CLASS);
-        });
-
-        section_four.addEventListener("click", function(){
-            removePressed();
-            section_four.classList.add(ACTIVE_CLASS);
-        });
-
-        section_five.addEventListener("click", function(){
-            removePressed();
-            section_five.classList.add(ACTIVE_CLASS);
-        });
-
-        function checkValidMove(slide) {
-
-            if (slide == 0) {
-                removePressed();
-                buttons.up.classList.add("invalid");
-                section_one.classList.add("pressed");
-            }
-            else if (slide == 4) {
-                removePressed();
-                buttons.down.classList.add("invalid");
-                section_five.classList.add("pressed");
-            }
-            else {
-                if (buttons.up.classList.contains("invalid")) {
-                    buttons.up.classList.remove("invalid");
-                }
-                if (buttons.down.classList.contains("invalid")) {
-                    buttons.down.classList.remove("invalid");
-                }
-
-                if (slide == 1) {
-                    removePressed();
-                    section_two.classList.add("pressed");
-                }
-                else if (slide == 2) {
-                    removePressed();
-                    section_three.classList.add("pressed");
-                }
-                else if (slide == 3) {
-                    removePressed();
-                    section_four.classList.add("pressed");
-                }
-            }
-        }
-        function moveUp() {
-            var howFarFromTop = $(document).scrollTop();
-            var currentWindowHeight = $(window).height();
-            var currentSlide = Math.round(howFarFromTop / currentWindowHeight, 0);
-
-            var slide = -1;
-
-            console.log(currentSlide);
-
-            pressButton(buttons.up);
-            smoothScroll(currentWindowHeight * (currentSlide - 1));
-            if (currentSlide > 0) {
-                slide = currentSlide - 1;
-            }
-            console.log(slide);
-            checkValidMove(slide);
-        }
-
-        function moveDown() {
-            var howFarFromTop = $(document).scrollTop();
-            var currentWindowHeight = $(window).height();
-            var currentSlide = Math.round(howFarFromTop / currentWindowHeight, 0);
-
-            console.log(currentSlide);
-
-            pressButton(buttons.down);
-            smoothScroll(currentWindowHeight * (currentSlide + 1));
-            if (currentSlide < 4) {
-                slide = currentSlide + 1;
-            }
-
-            console.log(slide);
-            checkValidMove(slide);
-        }
-
-        up.addEventListener("click", moveUp);
-        down.addEventListener("click", moveDown);
-
-        up.addEventListener("mouseover", function(){
-            if(!up.classList.contains("invalid") && !up.classList.contains("over")){
-                up.classList.add("over");
-            }
-        });
-        up.addEventListener("mouseout", function(){
-            if(up.classList.contains("over")){
-                up.classList.remove("over");
-            }
-        });
-
-        down.addEventListener("mouseover", function(){
-            if(!down.classList.contains("invalid") && !down.classList.contains("over")){
-                down.classList.add("over");
-            }
-        });
-        down.addEventListener("mouseout", function(){
-            if(down.classList.contains("over")){
-                down.classList.remove("over");
-            }
-        });
-
-        $(document).keyup(function (event) {
-
-            if (event.which == 37 || event.which == 38) {
-                moveUp();
-            }
-            if (event.which === 40 || event.which == 39) {
-                moveDown();
-            }
-        });
-    </script>
+    <footer class="container-fluid text-center">
+        <p>Footer Text</p>
+    </footer>
 
 </body>
 
